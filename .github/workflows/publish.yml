@@ -19,13 +19,14 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-          registry-url: 'https://registry.npmmirror.com'
 
       - name: Install pnpm
         run: npm install -g pnpm@9
 
       - name: Install dependencies
-        run: pnpm install --registry=https://registry.npmmirror.com
+        run: pnpm install
+        env:
+          npm_config_registry: https://registry.npmmirror.com
 
       - name: Build all packages
         run: pnpm build
