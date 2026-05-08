@@ -36,7 +36,15 @@
     "index.d.mts",
     "index.mjs.map"
   ],
+  "scripts": {
+    "build": "tsup",
+    "clean": "rm -rf dist"
+  },
   "peerDependencies": {
     "tailwindcss": ">=3.4.0"
+  },
+  "devDependencies": {
+    "tsup": "^8.0.0",
+    "typescript": "^5.4.0"
   }
 }
