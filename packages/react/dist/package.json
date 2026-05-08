@@ -1,0 +1,17 @@
+{
+  "name": "@aui/react",
+  "version": "0.1.0-alpha",
+  "type": "module",
+  "main": "./index.js",
+  "module": "./index.js",
+  "types": "./index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./index.js",
+      "types": "./index.d.ts"
+    }
+  },
+  "peerDependencies": {
+    "react": ">=18.0.0"
+  }
+}

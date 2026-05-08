@@ -1,10 +1,10 @@
 # Dependencies
 node_modules/
 
-# Build outputs
-dist/
-build/
-.vitepress/dist/
+# Build outputs (commit dist/ for published packages)
+# dist/ - tracked for @aui packages, not for regular projects
+# build/ - not tracked
+# .vitepress/dist/ - tracked for GitHub Pages deploy
 
 # Lock files (keep pnpm-lock.yaml for monorepo)
 # pnpm-lock.yaml

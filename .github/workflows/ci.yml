@@ -17,40 +17,15 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-          registry-url: https://registry.npmmirror.com
+
+      - name: Install pnpm
+        run: npm install -g pnpm@9
 
       - name: Install dependencies
-        run: npm install
+        run: pnpm install
 
       - name: TypeScript type check
-        run: npm run typecheck || true
-
-  build:
-    name: Build Packages
-    runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        package: [core, react, vue]
-    steps:
-      - uses: actions/checkout@v4
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-          registry-url: https://registry.npmmirror.com
-
-      - name: Install dependencies
-        run: npm install
-
-      - name: Build ${{ matrix.package }}
-        run: npm run build -w @aui/${{ matrix.package }}
-
-      - name: Upload build artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: dist-${{ matrix.package }}
-          path: packages/${{ matrix.package }}/dist
+        run: pnpm typecheck || true
 
   build-docs:
     name: Build Docs
@@ -62,16 +37,17 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-          registry-url: https://registry.npmmirror.com
+
+      - name: Install pnpm
+        run: npm install -g pnpm@9
 
       - name: Install dependencies
-        run: npm install
+        run: pnpm install
 
       - name: Build docs
-        run: npm run build:docs
+        run: pnpm build:docs
 
       - name: Upload docs artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-pages-artifact@v3
         with:
-          name: docs-dist
           path: docs/.vitepress/dist
