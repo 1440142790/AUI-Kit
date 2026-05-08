@@ -19,12 +19,13 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20'
+          registry-url: 'https://registry.npmmirror.com'
 
       - name: Install pnpm
         run: npm install -g pnpm@9
 
       - name: Install dependencies
-        run: pnpm install
+        run: pnpm install --registry=https://registry.npmmirror.com
 
       - name: Build all packages
         run: pnpm build
@@ -32,21 +33,21 @@ jobs:
       # Publish @aui/core first
       - name: Publish @aui/core
         working-directory: packages/core
-        run: pnpm publish --no-git-checks --access public
+        run: pnpm publish --registry=https://registry.npmjs.org --no-git-checks --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       # Publish @aui/react
       - name: Publish @aui/react
         working-directory: packages/react
-        run: pnpm publish --no-git-checks --access public
+        run: pnpm publish --registry=https://registry.npmjs.org --no-git-checks --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       # Publish @aui/vue
       - name: Publish @aui/vue
         working-directory: packages/vue
-        run: pnpm publish --no-git-checks --access public
+        run: pnpm publish --registry=https://registry.npmjs.org --no-git-checks --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 

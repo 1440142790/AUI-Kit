@@ -17,12 +17,13 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20'
+          registry-url: 'https://registry.npmmirror.com'
 
       - name: Install pnpm
         run: npm install -g pnpm@9
 
       - name: Install dependencies
-        run: pnpm install
+        run: pnpm install --registry=https://registry.npmmirror.com
 
       - name: TypeScript type check
         run: pnpm typecheck || true
@@ -40,12 +41,13 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20'
+          registry-url: 'https://registry.npmmirror.com'
 
       - name: Install pnpm
         run: npm install -g pnpm@9
 
       - name: Install dependencies
-        run: pnpm install
+        run: pnpm install --registry=https://registry.npmmirror.com
 
       - name: Build ${{ matrix.package }}
         run: pnpm --filter @aui/${{ matrix.package }} build
@@ -66,12 +68,13 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20'
+          registry-url: 'https://registry.npmmirror.com'
 
       - name: Install pnpm
         run: npm install -g pnpm@9
 
       - name: Install dependencies
-        run: pnpm install
+        run: pnpm install --registry=https://registry.npmmirror.com
 
       - name: Build docs
         run: pnpm build:docs
