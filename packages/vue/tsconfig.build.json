@@ -1,0 +1,17 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "jsx": "preserve",
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "moduleResolution": "bundler",
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "skipLibCheck": true,
+    "declaration": true,
+    "declarationDir": "./dist",
+    "paths": {
+      "@aui/core": ["./node_modules/@aui/core"]
+    }
+  },
+  "include": ["src/**/*.ts", "src/**/*.vue"]
+}

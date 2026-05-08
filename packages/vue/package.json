@@ -1,0 +1,55 @@
+{
+  "name": "@aui/vue",
+  "version": "0.1.0-alpha",
+  "description": "AUI Kit Vue 3 实现 - 基于 Tailwind CSS 的跨端 UI 组件，Props 接口与 React 版完全一致",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aui-kit/aui-kit.git",
+    "directory": "packages/vue"
+  },
+  "bugs": {
+    "url": "https://github.com/aui-kit/aui-kit/issues"
+  },
+  "homepage": "https://aui-kit.github.io/aui-kit",
+  "keywords": [
+    "aui",
+    "aui-vue",
+    "vue",
+    "vue3",
+    "ui",
+    "components",
+    "tailwind",
+    "tailwindcss",
+    "typescript"
+  ],
+  "type": "module",
+  "main": "./dist/index.mjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": ["dist"],
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite build --watch",
+    "clean": "rm -rf dist",
+    "typecheck": "vue-tsc --noEmit"
+  },
+  "peerDependencies": {
+    "@aui/core": "workspace:*",
+    "vue": ">=3.4.0"
+  },
+  "devDependencies": {
+    "@aui/core": "workspace:*",
+    "@vitejs/plugin-vue": "^5.0.0",
+    "typescript": "^5.4.0",
+    "vite": "^5.0.0",
+    "vue": "^3.4.0",
+    "vue-tsc": "^2.0.0"
+  }
+}

@@ -1,0 +1,91 @@
+# AUI Kit - AI 组件宪法 (.cursorrules)
+
+## 核心原则
+
+你是一个 AUI Kit 专家。生成的所有 UI 代码必须使用 `@aui/react` 或 `@aui/vue` 组件。
+
+## 强制规则
+
+1. **所有 UI 必须使用 AUI 组件** - 禁止使用原生 HTML（div, span, button 等）构建 UI
+2. **禁止手写 CSS** - 使用 Tailwind 类或 `@aui/core` 设计令牌
+3. **表单必须包裹在 Form + Form.Item 内** - Form.Item 必须有 `name` 属性
+4. **使用设计令牌** - 颜色、尺寸全部使用 `@aui/core` 中的令牌变量
+5. **无 any 类型** - 所有 Props 使用 `@aui/core` 导出的类型接口
+
+## 框架方言
+
+### React（.tsx/.jsx）
+- Props: `camelCase`（如 `type="primary"`、`loading={true}`）
+- 事件: `onClick={handler}`（不能省略 `={}`）
+- 布尔: `disabled={true}`（不能省略 `={true}`）
+
+### Vue（.vue）
+- Props: `kebab-case` 或 `:binding`（如 `type="primary"`、`:loading="true"`）
+- 事件: `@click="handler"`（使用 `@` 前缀）
+- 布尔: `:disabled="true"`（必须用 `:` 绑定）
+
+## 组件速查
+
+| 组件 | 用途 | React | Vue |
+|------|------|-------|-----|
+| Page | 页面容器 | `<Page title="标题" onBack={fn}>...</Page>` | `<Page title="标题" @back="fn">...</Page>` |
+| Grid | 栅格 | `<Grid cols={2} gap="md">...</Grid>` | `<Grid cols="2" gap="md">...</Grid>` |
+| Form | 表单 | `<Form onFinish={fn}>...</Form>` | `<Form @finish="fn">...</Form>` |
+| Form.Item | 表单项 | `<Form.Item name="email" label="邮箱">...</Form.Item>` | `<Form.Item name="email" label="邮箱">...</Form.Item>` |
+| Button | 按钮 | `<Button type="primary" onClick={fn}>提交</Button>` | `<Button type="primary" @click="fn">提交</Button>` |
+| Input | 输入框 | `<Input placeholder="请输入" />` | `<Input placeholder="请输入" />` |
+| Select | 选择器 | `<Select options={opts} />` | `<Select :options="opts" />` |
+| Modal | 对话框 | `<Modal visible={o} onOk={fn}>...</Modal>` | `<Modal :visible="o" @ok="fn">...</Modal>` |
+| Empty | 空状态 | `<Empty description="暂无数据" />` | `<Empty description="暂无数据" />` |
+| Skeleton | 骨架屏 | `<Skeleton loading type="list" rows={3}>...</Skeleton>` | `<Skeleton :loading :rows="3">...</Skeleton>` |
+| Tag | 标签 | `<Tag color="success">完成</Tag>` | `<Tag color="success">完成</Tag>` |
+| Badge | 徽标 | `<Badge count={5}><Icon /></Badge>` | `<Badge :count="5"><Icon /></Badge>` |
+| Avatar | 头像 | `<Avatar src={url} size="lg" />` | `<Avatar :src="url" size="lg" />` |
+| Tabs | 标签页 | `<Tabs items={items} activeKey={k} onChange={setK} />` | `<Tabs :items="items" :activeKey="k" @change="setK" />` |
+| Drawer | 抽屉 | `<Drawer visible={o} onClose={close}>...</Drawer>` | `<Drawer :visible="o" @close="close">...</Drawer>` |
+
+## 设计令牌
+
+```typescript
+import { colors, spacing, radius } from '@aui/core';
+
+colors.primary.DEFAULT  // 主色背景
+colors.danger.text      // 危险色文字
+colors.success.bg       // 成功色背景
+spacing.md              // 16px
+radius.lg               // 8px
+radius.full             // 9999px（药丸形）
+```
+
+## 违规示例
+
+❌ 禁止：原生 HTML + 内联样式
+```tsx
+<div style={{ padding: 16 }}>
+  <button style={{ background: '#1677ff', color: 'white' }}>提交</button>
+</div>
+```
+
+✅ 正确：AUI 组件 + Tailwind
+```tsx
+import { Page, Button } from '@aui/react';
+<Page><Button type="primary">提交</Button></Page>
+```
+
+❌ 禁止：不包裹 Form.Item
+```tsx
+<Form>
+  <div><input placeholder="邮箱" /></div>
+  <button type="submit">提交</button>
+</Form>
+```
+
+✅ 正确：Form + Form.Item
+```tsx
+<Form onFinish={handleSubmit}>
+  <Form.Item name="email" label="邮箱">
+    <Input placeholder="邮箱" />
+  </Form.Item>
+  <Button type="primary" htmlType="submit">提交</Button>
+</Form>
+```

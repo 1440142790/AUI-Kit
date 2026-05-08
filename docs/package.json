@@ -1,0 +1,14 @@
+{
+  "name": "@aui/docs",
+  "version": "0.1.0-alpha",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vitepress dev",
+    "build": "vitepress build",
+    "preview": "vitepress preview"
+  },
+  "devDependencies": {
+    "vitepress": "latest"
+  }
+}

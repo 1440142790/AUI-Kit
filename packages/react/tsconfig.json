@@ -1,0 +1,14 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "moduleResolution": "bundler",
+    "outDir": "./dist",
+    "skipLibCheck": true,
+    "paths": {
+      "@aui/core": ["../../packages/core/dist"]
+    }
+  },
+  "include": ["src"]
+}

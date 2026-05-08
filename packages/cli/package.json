@@ -1,0 +1,24 @@
+{
+  "name": "@aui/cli",
+  "version": "0.1.0-alpha",
+  "description": "AUI Kit CLI - 项目初始化、AI 规则注入",
+  "type": "module",
+  "bin": {
+    "aui": "./bin/aui.js"
+  },
+  "scripts": {
+    "dev": "tsx src/index.ts",
+    "build": "tsc && chmod +x bin/aui.js"
+  },
+  "dependencies": {
+    "@aui/core": "workspace:*",
+    "commander": "^11.1.0",
+    "fs-extra": "^11.2.0",
+    "picocolors": "^1.0.0"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^11.0.4",
+    "tsx": "^4.7.0",
+    "typescript": "^5.4.0"
+  }
+}

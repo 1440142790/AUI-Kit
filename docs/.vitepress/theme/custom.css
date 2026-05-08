@@ -1,0 +1,267 @@
+/**
+ * AUI Kit VitePress 主题 - 自定义样式
+ * 蓝色主题，呼应组件库主色 #1677ff
+ */
+
+/* ============================================
+   CSS 变量 - AUI 蓝主题
+   ============================================ */
+:root {
+  --aui-blue:      #1677ff;
+  --aui-blue-light: #69b1ff;
+  --aui-blue-dark:  #0958d9;
+  --aui-green:     #52c41a;
+  --aui-orange:    #faad14;
+  --aui-red:       #ff4d4f;
+  --aui-bg:        #ffffff;
+
+  /* VitePress 覆盖变量 */
+  --vp-c-brand-1: var(--aui-blue);
+  --vp-c-brand-2: var(--aui-blue-light);
+  --vp-c-brand-3: var(--aui-blue-dark);
+  --vp-c-brand-soft: rgba(22, 119, 255, 0.08);
+
+  /* 主色调渐变 */
+  --vp-c-brand-gradient: linear-gradient(135deg, #1677ff 0%, #69b1ff 100%);
+}
+
+/* ============================================
+   导航栏
+   ============================================ */
+.VPNav {
+  border-bottom: 1px solid rgba(22, 119, 255, 0.1) !important;
+}
+
+.VPNavBar .title {
+  font-weight: 700 !important;
+  background: var(--vp-c-brand-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ============================================
+   侧边栏
+   ============================================ */
+.VPSidebar {
+  border-right: 1px solid rgba(22, 119, 255, 0.08) !important;
+}
+
+.VPSidebarItem.is-active > .item > .text {
+  color: var(--aui-blue) !important;
+  font-weight: 600;
+}
+
+.VPSidebarItem.level-2 > .item:hover .text {
+  color: var(--aui-blue);
+}
+
+/* ============================================
+   代码块
+   ============================================ */
+.vp-code-group .tabs {
+  background: #f6f8fa;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.vp-code-group .tabs input:checked + label {
+  color: var(--aui-blue);
+  border-bottom: 2px solid var(--aui-blue);
+  margin-bottom: -2px;
+}
+
+/* ============================================
+   表格
+   ============================================ */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 14px;
+}
+
+th {
+  background: #f6f8fa;
+  font-weight: 600;
+  color: #374151;
+  border: 1px solid #e5e7eb;
+  padding: 10px 16px;
+  text-align: left;
+}
+
+td {
+  border: 1px solid #e5e7eb;
+  padding: 10px 16px;
+  color: #4b5563;
+}
+
+tr:hover td {
+  background: #f9fafb;
+}
+
+/* ============================================
+   自定义容器（tip/warning/danger/info）
+   ============================================ */
+:root {
+  --vp-custom-block-tip-border: var(--aui-blue);
+  --vp-custom-block-tip-text: var(--aui-blue);
+  --vp-custom-block-tip-bg: rgba(22, 119, 255, 0.06);
+
+  --vp-custom-block-warning-border: var(--aui-orange);
+  --vp-custom-block-warning-text: var(--aui-orange);
+  --vp-custom-block-warning-bg: rgba(250, 173, 20, 0.06);
+
+  --vp-custom-block-danger-border: var(--aui-red);
+  --vp-custom-block-danger-text: var(--aui-red);
+  --vp-custom-block-danger-bg: rgba(255, 77, 79, 0.06);
+}
+
+/* ============================================
+   主页 Hero 区域
+   ============================================ */
+.VPHero .name {
+  font-size: 3.5rem !important;
+  background: var(--vp-c-brand-gradient) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+  letter-spacing: -0.02em;
+}
+
+.VPHero .tagline {
+  font-size: 1.25rem !important;
+  color: #6b7280 !important;
+  max-width: 540px;
+  line-height: 1.8;
+}
+
+.VPHero .text {
+  font-size: 2.5rem !important;
+}
+
+/* 特性卡片 */
+.VPFeature {
+  border: 1px solid rgba(22, 119, 255, 0.12) !important;
+  border-radius: 16px !important;
+  transition: all 0.3s ease !important;
+}
+
+.VPFeature:hover {
+  border-color: var(--aui-blue) !important;
+  box-shadow: 0 4px 20px rgba(22, 119, 255, 0.12) !important;
+  transform: translateY(-2px);
+}
+
+.VPFeature .icon {
+  font-size: 2rem;
+}
+
+/* ============================================
+   滚动条
+   ============================================ */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(22, 119, 255, 0.2);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(22, 119, 255, 0.4);
+}
+
+/* ============================================
+   代码块样式
+   ============================================ */
+.vp-code-block {
+  border-radius: 12px !important;
+  border: 1px solid rgba(22, 119, 255, 0.1) !important;
+  overflow: hidden;
+}
+
+div[class*='language-'] {
+  border-radius: 12px !important;
+}
+
+/* ============================================
+   页面内容区
+   ============================================ */
+.VPDoc .content-container {
+  max-width: 860px !important;
+}
+
+/* 标题样式 */
+.VPDoc h1 {
+  font-size: 2rem !important;
+  font-weight: 700 !important;
+  background: var(--vp-c-brand-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 0.5em !important;
+}
+
+.VPDoc h2 {
+  border-top: none !important;
+  padding-top: 0 !important;
+}
+
+.VPDoc h2::before {
+  content: '';
+  display: block;
+  width: 32px;
+  height: 3px;
+  background: var(--vp-c-brand-gradient);
+  border-radius: 2px;
+  margin-bottom: 16px;
+}
+
+/* ============================================
+   搜索框
+   ============================================ */
+.VPNavBarSearch .DocSearch-Button {
+  border-radius: 8px !important;
+  border: 1px solid rgba(22, 119, 255, 0.15) !important;
+}
+
+.VPNavBarSearch .DocSearch-Button:hover {
+  border-color: var(--aui-blue) !important;
+  box-shadow: 0 0 0 2px rgba(22, 119, 255, 0.1) !important;
+}
+
+/* ============================================
+   组件演示区（文档页用）
+   ============================================ */
+.doc-demo-box {
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 32px 24px;
+  background: #fff;
+  margin: 16px 0;
+}
+
+.doc-demo-label {
+  font-size: 12px;
+  color: #9ca3af;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 16px;
+}
+
+/* ============================================
+   响应式
+   ============================================ */
+@media (max-width: 768px) {
+  .VPHero .name {
+    font-size: 2.5rem !important;
+  }
+  .VPHero .text {
+    font-size: 1.75rem !important;
+  }
+}

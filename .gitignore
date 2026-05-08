@@ -1,0 +1,47 @@
+# Dependencies
+node_modules/
+
+# Build outputs
+dist/
+build/
+.vitepress/dist/
+
+# Lock files (keep pnpm-lock.yaml for monorepo)
+# pnpm-lock.yaml
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
+
+# TypeScript cache
+*.tsbuildinfo
+
+# Test coverage
+coverage/
+
+# Temp
+*.tmp
+*.temp
+.cowork-temp/
+
+# pnpm debug
+.pnpm-debug.log
+
+# Turbo
+.turbo/
+
+# VitePress cache
+.vitepress/cache/

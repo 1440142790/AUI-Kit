@@ -1,0 +1,42 @@
+{
+  "name": "@aui/core",
+  "version": "0.1.0-alpha",
+  "description": "AUI Kit 核心包 - 设计令牌、类型定义、工具函数、平台检测",
+  "type": "module",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aui-kit/aui-kit.git",
+    "directory": "packages/core"
+  },
+  "bugs": {
+    "url": "https://github.com/aui-kit/aui-kit/issues"
+  },
+  "homepage": "https://aui-kit.github.io/aui-kit",
+  "keywords": [
+    "aui",
+    "aui-core",
+    "design-tokens",
+    "tailwind",
+    "tailwindcss",
+    "typescript",
+    "ui"
+  ],
+  "main": "./index.mjs",
+  "module": "./index.mjs",
+  "types": "./index.d.mts",
+  "exports": {
+    ".": {
+      "import": "./index.mjs",
+      "types": "./index.d.mts"
+    }
+  },
+  "files": [
+    "index.mjs",
+    "index.d.mts",
+    "index.mjs.map"
+  ],
+  "peerDependencies": {
+    "tailwindcss": ">=3.4.0"
+  }
+}
