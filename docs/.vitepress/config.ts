@@ -18,7 +18,7 @@ export default defineConfig({
   themeConfig: {
     logo: '/logo.svg',
     siteTitle: 'AUI Kit',
-    repo: 'your-org/aui-kit',
+    repo: '1440142790/aui-kit',
     docsDir: 'docs',
 
     nav: [
@@ -99,7 +99,7 @@ export default defineConfig({
     },
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/your-org/aui-kit' },
+      { icon: 'github', link: 'https://github.com/1440142790/aui-kit' },
       { icon: 'twitter', link: 'https://twitter.com/auikit' },
     ],
 
@@ -111,7 +111,7 @@ export default defineConfig({
     },
 
     editLink: {
-      pattern: 'https://github.com/your-org/aui-kit/edit/main/docs/:path',
+      pattern: 'https://github.com/1440142790/aui-kit/edit/main/docs/:path',
       text: '在 GitHub 上编辑此页',
     },
 
