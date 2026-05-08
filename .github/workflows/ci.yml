@@ -17,17 +17,13 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-
-      - name: Install pnpm
-        run: npm install -g pnpm@9
+          registry-url: https://registry.npmmirror.com
 
       - name: Install dependencies
-        run: pnpm install
-        env:
-          npm_config_registry: https://registry.npmmirror.com
+        run: npm install
 
       - name: TypeScript type check
-        run: pnpm typecheck || true
+        run: npm run typecheck || true
 
   build:
     name: Build Packages
@@ -42,17 +38,13 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-
-      - name: Install pnpm
-        run: npm install -g pnpm@9
+          registry-url: https://registry.npmmirror.com
 
       - name: Install dependencies
-        run: pnpm install
-        env:
-          npm_config_registry: https://registry.npmmirror.com
+        run: npm install
 
       - name: Build ${{ matrix.package }}
-        run: pnpm --filter @aui/${{ matrix.package }} build
+        run: npm run build -w @aui/${{ matrix.package }}
 
       - name: Upload build artifact
         uses: actions/upload-artifact@v4
@@ -70,17 +62,13 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-
-      - name: Install pnpm
-        run: npm install -g pnpm@9
+          registry-url: https://registry.npmmirror.com
 
       - name: Install dependencies
-        run: pnpm install
-        env:
-          npm_config_registry: https://registry.npmmirror.com
+        run: npm install
 
       - name: Build docs
-        run: pnpm build:docs
+        run: npm run build:docs
 
       - name: Upload docs artifact
         uses: actions/upload-artifact@v4

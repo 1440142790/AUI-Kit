@@ -3,8 +3,11 @@
   "version": "0.1.0-alpha",
   "description": "AI-optimized Universal UI Kit - 跨框架、跨端 UI 组件体系，让 AI 编程工具为任意框架生成一致界面",
   "private": true,
-  "packageManager": "pnpm@9.0.0",
   "license": "MIT",
+  "workspaces": [
+    "packages/*",
+    "docs"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/aui-kit/aui-kit.git"
@@ -28,15 +31,14 @@
     "typescript"
   ],
   "scripts": {
-    "build": "pnpm -r run build",
-    "build:docs": "pnpm --filter @aui/docs build",
-    "dev": "pnpm -r --parallel run dev",
-    "dev:docs": "pnpm --filter @aui/docs dev",
-    "clean": "pnpm -r run clean && rm -rf node_modules",
-    "typecheck": "pnpm -r run typecheck",
-    "test": "pnpm -r run test",
-    "lint": "pnpm -r run lint",
-    "preview": "pnpm --filter @aui/react-demo --filter @aui/vue-demo run dev"
+    "build": "npm run build -ws",
+    "build:docs": "npm run build -w @aui/docs",
+    "dev": "npm run dev -ws --if-present",
+    "dev:docs": "npm run dev -w @aui/docs",
+    "clean": "npm run clean -ws --if-present && rm -rf node_modules",
+    "typecheck": "npm run typecheck -ws --if-present",
+    "test": "npm run test -ws --if-present",
+    "preview": "npm run preview -w @aui/react-demo -w @aui/vue-demo"
   },
   "devDependencies": {
     "typescript": "^5.4.0",
