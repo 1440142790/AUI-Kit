@@ -7,21 +7,21 @@ on:
     branches: [main, master]
 
 jobs:
-  # Skip pnpm install - dist/ committed to repo, network unavailable in Actions
-  build-docs:
-    name: Build Docs
+  # dist/ is committed to repo, skip install/build
+  verify-artifacts:
+    name: Verify Artifacts
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
 
-      - name: Setup Pages
-        uses: actions/configure-pages@v4
+      - name: Verify core dist
+        run: test -f packages/core/dist/index.js && echo "core OK" || exit 1
 
-      - name: Upload docs artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: docs/.vitepress/dist
+      - name: Verify react dist
+        run: test -f packages/react/dist/index.js && echo "react OK" || exit 1
 
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+      - name: Verify vue dist
+        run: test -f packages/vue/dist/index.js && echo "vue OK" || exit 1
+
+      - name: Verify docs dist
+        run: test -f docs/.vitepress/dist/index.html && echo "docs OK" || exit 1
