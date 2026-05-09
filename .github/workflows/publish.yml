@@ -25,16 +25,22 @@ jobs:
       - name: Publish @aui/core
         working-directory: packages/core
         run: npm publish --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       # Publish @aui/react (dist already committed)
       - name: Publish @aui/react
         working-directory: packages/react
         run: npm publish --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       # Publish @aui/vue (dist already committed)
       - name: Publish @aui/vue
         working-directory: packages/vue
         run: npm publish --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v1
