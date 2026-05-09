@@ -1,17 +1,17 @@
 {
   "name": "aui-kit",
   "version": "0.1.0-alpha",
-  "description": "AI-optimized Universal UI Kit - 跨框架、跨�?UI 组件体系，让 AI 编程工具为任意框架生成一致界�?,
+  "description": "AI-optimized Universal UI Kit - cross-framework cross-platform UI component system for AI coding tools",
   "private": true,
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/aui-kit/aui-kit.git"
+    "url": "https://github.com/1440142790/AUI-Kit.git"
   },
   "bugs": {
-    "url": "https://github.com/aui-kit/aui-kit/issues"
+    "url": "https://github.com/1440142790/AUI-Kit/issues"
   },
-  "homepage": "https://aui-kit.github.io/aui-kit",
+  "homepage": "https://1440142790.github.io/AUI-Kit",
   "keywords": [
     "ui",
     "components",
@@ -28,13 +28,12 @@
   ],
   "scripts": {
     "build": "pnpm -r run build",
-    "build:docs": "pnpm --filter @aui/docs run build",
+    "build:docs": "vitepress build docs",
     "dev": "pnpm -r --parallel run dev",
-    "dev:docs": "pnpm --filter @aui/docs run dev",
+    "dev:docs": "vitepress dev docs",
     "clean": "pnpm -r run clean && rm -rf node_modules",
     "typecheck": "pnpm -r run typecheck",
-    "test": "pnpm -r run test",
-    "preview": "pnpm --filter @yaomingshan/react-demo --filter @yaomingshan/vue-demo run dev"
+    "test": "pnpm -r run test"
   },
   "devDependencies": {
     "typescript": "^5.4.0",

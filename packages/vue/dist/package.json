@@ -13,5 +13,14 @@
   },
   "peerDependencies": {
     "vue": ">=3.4.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/1440142790/AUI-Kit.git",
+    "directory": "packages/vue/dist"
+  },
+  "bugs": {
+    "url": "https://github.com/1440142790/AUI-Kit/issues"
+  },
+  "homepage": "https://1440142790.github.io/AUI-Kit"
 }

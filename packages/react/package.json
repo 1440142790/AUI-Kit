@@ -1,17 +1,17 @@
 {
   "name": "@yaomingshan/react",
   "version": "0.1.0-alpha",
-  "description": "AUI Kit React 18 实现 - 基于 Tailwind CSS 的跨�?UI 组件，Props 接口�?Vue 版完全一�?,
+  "description": "AUI Kit React 18 implementation - cross-platform UI components based on Tailwind CSS",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/aui-kit/aui-kit.git",
+    "url": "https://github.com/1440142790/AUI-Kit.git",
     "directory": "packages/react"
   },
   "bugs": {
-    "url": "https://github.com/aui-kit/aui-kit/issues"
+    "url": "https://github.com/1440142790/AUI-Kit/issues"
   },
-  "homepage": "https://aui-kit.github.io/aui-kit",
+  "homepage": "https://1440142790.github.io/AUI-Kit",
   "keywords": [
     "aui",
     "aui-react",
