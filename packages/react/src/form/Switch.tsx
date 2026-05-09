@@ -1,8 +1,7 @@
 /**
- * Switch 开关
- *
+ * Switch 开�? *
  * @example React
- * import { Switch } from '@aui/react';
+ * import { Switch } from '@yaomingshan/react';
  * <Switch checked={on} onChange={setOn} />
  *
  * @example Vue
@@ -10,7 +9,7 @@
  */
 
 import React, { useMemo } from 'react';
-import { type SwitchProps, cx } from '@aui/core';
+import { type SwitchProps, cx } from '@yaomingshan/core';
 
 export const Switch = React.forwardRef<HTMLButtonElement, SwitchProps>(
   ({ checked, defaultChecked = false, onChange, loading = false, checkedChildren, unCheckedChildren, size = 'md', className, disabled, ...rest }, ref) => {

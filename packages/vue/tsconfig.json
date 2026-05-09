@@ -7,7 +7,7 @@
     "outDir": "./dist",
     "skipLibCheck": true,
     "paths": {
-      "@aui/core": ["../../packages/core/dist"]
+      "@yaomingshan/core": ["../../packages/core/dist"]
     }
   },
   "include": ["src"]

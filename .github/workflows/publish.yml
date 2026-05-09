@@ -23,22 +23,22 @@ jobs:
           registry-url: https://registry.npmjs.org
           id: publisher        # Enable Trusted Publishing via OIDC
 
-      # Publish @aui/core (dist already committed)
-      - name: Publish @aui/core
+      # Publish @yaomingshan/core (dist already committed)
+      - name: Publish @yaomingshan/core
         working-directory: packages/core
         run: npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
-      # Publish @aui/react (dist already committed)
-      - name: Publish @aui/react
+      # Publish @yaomingshan/react (dist already committed)
+      - name: Publish @yaomingshan/react
         working-directory: packages/react
         run: npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
-      # Publish @aui/vue (dist already committed)
-      - name: Publish @aui/vue
+      # Publish @yaomingshan/vue (dist already committed)
+      - name: Publish @yaomingshan/vue
         working-directory: packages/vue
         run: npm publish --access public
         env:

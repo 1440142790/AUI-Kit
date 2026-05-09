@@ -1,17 +1,16 @@
 /**
  * Form 表单
  *
- * @fileoverview 表单容器，所有表单项必须在 Form 内使用
- *
+ * @fileoverview 表单容器，所有表单项必须�?Form 内使�? *
  * @example React
- * import { Form, FormItem, Input, Button } from '@aui/react';
+ * import { Form, FormItem, Input, Button } from '@yaomingshan/react';
  *
  * <Form onFinish={handleSubmit} layout="vertical">
- *   <FormItem name="email" label="邮箱" rules={[{ required: true, message: '请输入邮箱' }]}>
- *     <Input placeholder="请输入邮箱" />
+ *   <FormItem name="email" label="邮箱" rules={[{ required: true, message: '请输入邮�? }]}>
+ *     <Input placeholder="请输入邮�? />
  *   </FormItem>
  *   <FormItem name="password" label="密码">
- *     <Input type="password" placeholder="请输入密码" />
+ *     <Input type="password" placeholder="请输入密�? />
  *   </FormItem>
  *   <Button type="primary" htmlType="submit">提交</Button>
  * </Form>
@@ -19,13 +18,13 @@
  * @example Vue
  * <Form @finish="handleSubmit" layout="vertical">
  *   <FormItem name="email" label="邮箱" :rules="emailRules">
- *     <Input placeholder="请输入邮箱" />
+ *     <Input placeholder="请输入邮�? />
  *   </FormItem>
  * </Form>
  */
 
 import React, { createContext, useContext, useState, useCallback, useMemo, type ReactNode } from 'react';
-import { type FormProps as BaseFormProps, type FormRule, cx } from '@aui/core';
+import { type FormProps as BaseFormProps, type FormRule, cx } from '@yaomingshan/core';
 
 interface FormContextValue {
   values: Record<string, unknown>;
@@ -59,19 +58,19 @@ export const Form = React.forwardRef<HTMLFormElement, BaseFormProps & { children
       const value = values[name];
       for (const rule of rules) {
         if (rule.required && (value === undefined || value === null || value === '')) {
-          setErrors((prev) => ({ ...prev, [name]: rule.message ?? '此字段为必填项' }));
+          setErrors((prev) => ({ ...prev, [name]: rule.message ?? '此字段为必填�? }));
           return false;
         }
         if (rule.type === 'email' && typeof value === 'string' && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) {
-          setErrors((prev) => ({ ...prev, [name]: rule.message ?? '邮箱格式不正确' }));
+          setErrors((prev) => ({ ...prev, [name]: rule.message ?? '邮箱格式不正�? }));
           return false;
         }
         if (rule.min !== undefined && typeof value === 'string' && value.length < rule.min) {
-          setErrors((prev) => ({ ...prev, [name]: rule.message ?? `最少 ${rule.min} 个字符` }));
+          setErrors((prev) => ({ ...prev, [name]: rule.message ?? `最�?${rule.min} 个字符` }));
           return false;
         }
         if (rule.max !== undefined && typeof value === 'string' && value.length > rule.max) {
-          setErrors((prev) => ({ ...prev, [name]: rule.message ?? `最多 ${rule.max} 个字符` }));
+          setErrors((prev) => ({ ...prev, [name]: rule.message ?? `最�?${rule.max} 个字符` }));
           return false;
         }
       }
@@ -124,7 +123,7 @@ Form.displayName = 'Form';
 // Form.Item
 // ============================================================
 
-import { type FormItemProps as BaseFormItemProps } from '@aui/core';
+import { type FormItemProps as BaseFormItemProps } from '@yaomingshan/core';
 
 export const FormItem = React.forwardRef<HTMLDivElement, BaseFormItemProps & { children?: ReactNode }>(
   ({ name, label, rules, required, error, help, labelWidth, span, children, className }, ref) => {

@@ -1,15 +1,14 @@
 /**
- * Popconfirm 气泡确认框
- *
+ * Popconfirm 气泡确认�? *
  * @example React
- * import { Popconfirm, Button } from '@aui/react';
- * <Popconfirm title="确定删除？" onConfirm={handleDelete}>
+ * import { Popconfirm, Button } from '@yaomingshan/react';
+ * <Popconfirm title="确定删除�? onConfirm={handleDelete}>
  *   <Button danger>删除</Button>
  * </Popconfirm>
  */
 
 import React, { useState, useRef, useEffect } from 'react';
-import { type PopconfirmProps, type Placement, cx } from '@aui/core';
+import { type PopconfirmProps, type Placement, cx } from '@yaomingshan/core';
 
 const placementMap: Record<Placement, string> = {
   top:         'bottom-full left-1/2 -translate-x-1/2 mb-2',

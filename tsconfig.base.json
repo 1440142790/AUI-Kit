@@ -17,9 +17,9 @@
     "noFallthroughCasesInSwitch": true,
     "baseUrl": ".",
     "paths": {
-      "@aui/core": ["packages/core/src"],
-      "@aui/react": ["packages/react/src"],
-      "@aui/vue": ["packages/vue/src"]
+      "@yaomingshan/core": ["packages/core/src"],
+      "@yaomingshan/react": ["packages/react/src"],
+      "@yaomingshan/vue": ["packages/vue/src"]
     }
   }
 }

@@ -1,13 +1,11 @@
-# Modal 对话框
-
-模态弹窗，用于需要用户确认或输入的场景。移动端自动转为 BottomSheet。
-
+# Modal 对话�?
+模态弹窗，用于需要用户确认或输入的场景。移动端自动转为 BottomSheet�?
 ## 基本用法
 
 ::: code-group
 
 ```tsx [React]
-import { Modal, Button } from '@aui/react';
+import { Modal, Button } from '@yaomingshan/react';
 
 const [open, setOpen] = useState(false);
 
@@ -26,7 +24,7 @@ const [open, setOpen] = useState(false);
 
 ```vue [Vue]
 <script setup>
-import { Modal, Button } from '@aui/vue';
+import { Modal, Button } from '@yaomingshan/vue';
 const open = ref(false);
 </script>
 
@@ -45,11 +43,10 @@ const open = ref(false);
 
 :::
 
-## 自定义底部
-
+## 自定义底�?
 ```tsx
 <Modal
-  title="自定义底部"
+  title="自定义底�?
   visible={open}
   :showOk="true"
   :showCancel="true"
@@ -68,7 +65,7 @@ const open = ref(false);
 
 ## Props
 
-| 参数 | 说明 | 类型 | 默认值 |
+| 参数 | 说明 | 类型 | 默认�?|
 |------|------|------|--------|
 | `visible` | 是否显示 | `boolean` | `false` |
 | `title` | 标题 | `ReactNode` | `-` |
@@ -77,13 +74,12 @@ const open = ref(false);
 | `showCancel` | 是否显示取消按钮 | `boolean` | `true` |
 | `okText` | 确定按钮文字 | `string` | `'确定'` |
 | `cancelText` | 取消按钮文字 | `string` | `'取消'` |
-| `confirmLoading` | 确定按钮加载状态 | `boolean` | `false` |
+| `confirmLoading` | 确定按钮加载状�?| `boolean` | `false` |
 | `maskClosable` | 点击遮罩是否关闭 | `boolean` | `true` |
 | `closable` | 是否显示关闭按钮 | `boolean` | `true` |
 | `width` | 弹窗宽度 | `number \| string` | `520` |
 | `onOk` | 点击确定回调 | `() => void` | `-` |
 | `onCancel` | 点击取消/关闭回调 | `() => void` | `-` |
 
-## 移动端
-
-移动端（`platform="mobile"`）时，Modal 自动渲染为 BottomSheet。
+## 移动�?
+移动端（`platform="mobile"`）时，Modal 自动渲染�?BottomSheet�?

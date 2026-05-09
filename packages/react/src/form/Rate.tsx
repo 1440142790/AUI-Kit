@@ -2,12 +2,12 @@
  * Rate 评分
  *
  * @example React
- * import { Rate } from '@aui/react';
+ * import { Rate } from '@yaomingshan/react';
  * <Rate count={5} value={rating} onChange={setRating} allowHalf />
  */
 
 import React, { useState, useMemo } from 'react';
-import { type RateProps, cx } from '@aui/core';
+import { type RateProps, cx } from '@yaomingshan/core';
 
 const StarSVG = ({ filled }: { filled: boolean | 'half' }) => (
   <svg width="20" height="20" viewBox="0 0 20 20" fill="none">

@@ -1,16 +1,15 @@
 /**
- * Statistic 统计数值
- *
+ * Statistic 统计数�? *
  * @example React
- * import { Statistic } from '@aui/react';
- * <Statistic title="用户总数" value={1024} prefix="↑" suffix="人" />
+ * import { Statistic } from '@yaomingshan/react';
+ * <Statistic title="用户总数" value={1024} prefix="�? suffix="�? />
  *
  * @example Vue
- * <Statistic title="用户总数" :value="1024" prefix="↑" suffix="人" />
+ * <Statistic title="用户总数" :value="1024" prefix="�? suffix="�? />
  */
 
 import React, { useMemo } from 'react';
-import { type StatisticProps, cx } from '@aui/core';
+import { type StatisticProps, cx } from '@yaomingshan/core';
 
 export const Statistic = React.forwardRef<HTMLDivElement, StatisticProps>(
   ({ title, value, prefix, suffix, valueStyle, precision, formatter, className, ...rest }, ref) => {

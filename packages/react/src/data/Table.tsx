@@ -2,7 +2,7 @@
  * Table 表格
  *
  * @example React
- * import { Table } from '@aui/react';
+ * import { Table } from '@yaomingshan/react';
  * const columns = [{ key: 'name', title: '姓名', dataIndex: 'name' }];
  * <Table columns={columns} dataSource={data} bordered />
  *
@@ -11,7 +11,7 @@
  */
 
 import React, { useMemo } from 'react';
-import { type TableProps, type TableColumn, cx } from '@aui/core';
+import { type TableProps, type TableColumn, cx } from '@yaomingshan/core';
 import { Empty } from '../feedback/Empty';
 import { Spin } from '../feedback/Spin';
 
@@ -101,8 +101,7 @@ export const Table = React.forwardRef<HTMLTableElement, TableProps>(
         {pagination && pagination !== false && (
           <div className="flex items-center justify-end gap-2 mt-4 px-4 py-2">
             <span className="text-sm text-[#595959]">
-              共 {pagination.total ?? dataSource.length} 条
-            </span>
+              �?{pagination.total ?? dataSource.length} �?            </span>
             <div className="flex gap-1">
               {Array.from({ length: Math.ceil((pagination.total ?? dataSource.length) / (pagination.pageSize ?? 10)) }).map((_, i) => (
                 <button

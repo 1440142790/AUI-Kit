@@ -2,13 +2,13 @@
  * Radio 单选框
  *
  * @example React
- * import { Radio } from '@aui/react';
+ * import { Radio } from '@yaomingshan/react';
  * const options = [{ label: '选项A', value: 'a' }, { label: '选项B', value: 'b' }];
  * <Radio options={options} value={selected} onChange={setSelected} />
  */
 
 import React, { useState, useMemo } from 'react';
-import { type RadioProps, cx } from '@aui/core';
+import { type RadioProps, cx } from '@yaomingshan/core';
 
 export const Radio = React.forwardRef<HTMLDivElement, RadioProps>(
   ({ options = [], value, defaultValue, direction = 'horizontal', onChange, disabled = false, className, ...rest }, ref) => {

@@ -4,7 +4,7 @@
  * @fileoverview 基于 CSS Grid 的响应式栅格布局
  *
  * @example React
- * import { Grid } from '@aui/react';
+ * import { Grid } from '@yaomingshan/react';
  *
  * <Grid cols={2} gap="md">
  *   <div>Item 1</div>
@@ -13,8 +13,7 @@
  *   <div>Item 4</div>
  * </Grid>
  *
- * // 响应式列数
- * <Grid cols={{ xs: 1, sm: 2, md: 3, lg: 4 }} gap="lg">
+ * // 响应式列�? * <Grid cols={{ xs: 1, sm: 2, md: 3, lg: 4 }} gap="lg">
  *   {items.map(item => <div key={item.id}>{item.name}</div>)}
  * </Grid>
  *
@@ -25,7 +24,7 @@
  */
 
 import React, { useMemo } from 'react';
-import { type GridProps, type Spacing, cx } from '@aui/core';
+import { type GridProps, type Spacing, cx } from '@yaomingshan/core';
 
 const gapMap: Record<Spacing, string> = {
   xs:   'gap-1',

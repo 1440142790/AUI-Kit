@@ -1,13 +1,11 @@
-# Select 选择器
-
-下拉选择器，用于从多个选项中选择。
-
+# Select 选择�?
+下拉选择器，用于从多个选项中选择�?
 ## 基本用法
 
 ::: code-group
 
 ```tsx [React]
-import { Select } from '@aui/react';
+import { Select } from '@yaomingshan/react';
 
 const options = [
   { label: '北京', value: 'beijing' },
@@ -34,8 +32,7 @@ const options = [
 
 :::
 
-## 可搜索
-
+## 可搜�?
 ```tsx
 <Select
   options={options}
@@ -44,8 +41,7 @@ const options = [
 />
 ```
 
-## 多选
-
+## 多�?
 ```tsx
 <Select
   options={options}
@@ -54,8 +50,7 @@ const options = [
 />
 ```
 
-## 可清除
-
+## 可清�?
 ```tsx
 <Select
   options={options}
@@ -69,7 +64,7 @@ const options = [
 ::: code-group
 
 ```tsx [React]
-import { Select } from '@aui/react';
+import { Select } from '@yaomingshan/react';
 const [city, setCity] = useState('');
 
 <Select
@@ -90,15 +85,15 @@ const [city, setCity] = useState('');
 
 ## Props
 
-| 参数 | 说明 | 类型 | 默认值 |
+| 参数 | 说明 | 类型 | 默认�?|
 |------|------|------|--------|
 | `options` | 选项列表 | `SelectOption[]` | `[]` |
-| `value` | 当前值（受控） | `string \| string[]` | `-` |
-| `defaultValue` | 默认值 | `string \| string[]` | `-` |
+| `value` | 当前值（受控�?| `string \| string[]` | `-` |
+| `defaultValue` | 默认�?| `string \| string[]` | `-` |
 | `placeholder` | 占位文本 | `string` | `-` |
-| `multiple` | 是否多选 | `boolean` | `false` |
-| `searchable` | 是否可搜索 | `boolean` | `false` |
-| `allowClear` | 是否可清除 | `boolean` | `false` |
+| `multiple` | 是否多�?| `boolean` | `false` |
+| `searchable` | 是否可搜�?| `boolean` | `false` |
+| `allowClear` | 是否可清�?| `boolean` | `false` |
 | `disabled` | 是否禁用 | `boolean` | `false` |
 | `onChange` | 变化回调 | `(value: string \| string[]) => void` | `-` |
 
@@ -107,8 +102,7 @@ const [city, setCity] = useState('');
 ```typescript
 interface SelectOption {
   label: string;      // 显示文本
-  value: string;      // 唯一值
-  disabled?: boolean; // 是否禁用
+  value: string;      // 唯一�?  disabled?: boolean; // 是否禁用
   children?: SelectOption[]; // 子选项（分组）
 }
 ```

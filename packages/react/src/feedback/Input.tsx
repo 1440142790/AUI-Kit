@@ -1,10 +1,8 @@
 /**
- * Input 输入框
- *
- * @fileoverview 单行文本输入框，支持前缀/后缀图标、清除按钮
- *
+ * Input 输入�? *
+ * @fileoverview 单行文本输入框，支持前缀/后缀图标、清除按�? *
  * @example React
- * import { Input } from '@aui/react';
+ * import { Input } from '@yaomingshan/react';
  *
  * // 基本用法
  * <Input placeholder="请输入用户名" />
@@ -12,8 +10,7 @@
  * // 带前缀图标
  * <Input placeholder="请输入用户名" prefix={<UserIcon />} />
  *
- * // 带清除按钮
- * <Input allowClear placeholder="可清除的输入" />
+ * // 带清除按�? * <Input allowClear placeholder="可清除的输入" />
  *
  * // 受控模式
  * const [value, setValue] = useState('');
@@ -21,7 +18,7 @@
  *
  * @example Vue
  * <script setup>
- * import { Input } from '@aui/vue';
+ * import { Input } from '@yaomingshan/vue';
  * const username = ref('');
  * </script>
  * <template>
@@ -30,7 +27,7 @@
  */
 
 import React, { useState, useCallback, useMemo } from 'react';
-import { type InputProps, cx } from '@aui/core';
+import { type InputProps, cx } from '@yaomingshan/core';
 
 export const Input = React.forwardRef<HTMLInputElement, InputProps>(
   (

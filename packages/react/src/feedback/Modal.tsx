@@ -1,11 +1,10 @@
 /**
- * Modal 对话框
- *
- * @fileoverview 模态对话框，支持自定义内容、确定/取消按钮
- * 移动端自动转为 BottomSheet
+ * Modal 对话�? *
+ * @fileoverview 模态对话框，支持自定义内容、确�?取消按钮
+ * 移动端自动转�?BottomSheet
  *
  * @example React
- * import { Modal } from '@aui/react';
+ * import { Modal } from '@yaomingshan/react';
  *
  * <Modal
  *   visible={showModal}
@@ -13,8 +12,7 @@
  *   onOk={handleOk}
  *   onCancel={() => setShowModal(false)}
  * >
- *   确定要删除这条数据吗？
- * </Modal>
+ *   确定要删除这条数据吗�? * </Modal>
  *
  * @example Vue
  * <Modal
@@ -23,12 +21,11 @@
  *   @ok="handleOk"
  *   @cancel="showModal = false"
  * >
- *   确定要删除这条数据吗？
- * </Modal>
+ *   确定要删除这条数据吗�? * </Modal>
  */
 
 import React, { useEffect, useMemo } from 'react';
-import { type ModalProps, cx } from '@aui/core';
+import { type ModalProps, cx } from '@yaomingshan/core';
 import { Button } from './Button';
 
 export const Modal = React.forwardRef<HTMLDivElement, ModalProps>(
@@ -173,7 +170,7 @@ function BottomSheetModal(props: ModalProps) {
     <div className="fixed inset-0 z-[1300] flex flex-col justify-end">
       <div className="absolute inset-0 bg-[rgba(0,0,0,0.45)]" onClick={onClose} />
       <div className={cx('relative bg-white rounded-t-2xl max-h-[85vh] flex flex-col z-10', className)}>
-        {/* 拖拽条 */}
+        {/* 拖拽�?*/}
         <div className="flex justify-center pt-3 pb-2">
           <div className="w-10 h-1 rounded-full bg-[#d9d9d9]" />
         </div>

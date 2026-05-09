@@ -1,13 +1,12 @@
 /**
- * TextArea 文本域
- *
+ * TextArea 文本�? *
  * @example React
- * import { TextArea } from '@aui/react';
- * <TextArea rows={4} showCount maxLength={200} placeholder="请输入描述" />
+ * import { TextArea } from '@yaomingshan/react';
+ * <TextArea rows={4} showCount maxLength={200} placeholder="请输入描�? />
  */
 
 import React, { useState, useCallback, useMemo } from 'react';
-import { type TextAreaProps, cx } from '@aui/core';
+import { type TextAreaProps, cx } from '@yaomingshan/core';
 
 export const TextArea = React.forwardRef<HTMLTextAreaElement, TextAreaProps>(
   ({ rows = 4, maxLength, showCount = false, placeholder, value, defaultValue, onChange, autoSize, disabled = false, className, style, ...rest }, ref) => {

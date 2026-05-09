@@ -1,7 +1,5 @@
-# AUI Kit 组件速查表（40+ 组件）
-
-> AI 生成代码时参考此文档，确保 React/Vue 双框架 API 完全一致。
-
+# AUI Kit 组件速查表（40+ 组件�?
+> AI 生成代码时参考此文档，确�?React/Vue 双框�?API 完全一致�?
 ---
 
 ## 一、布局与导航（7个）
@@ -25,21 +23,21 @@
 | **Table** | columns, dataSource, pagination, onRow, bordered, striped | `<Table columns={cols} dataSource={data} bordered />` | `<Table :columns="cols" :dataSource="data" bordered />` |
 | **CardList** | dataSource, renderItem, columns, gap, loading | `<CardList dataSource={list} renderItem={r} columns={2} />` | `<CardList :dataSource="list" :renderItem="r" :columns="2" />` |
 | **Descriptions** | items, column, bordered, labelWidth | `<Descriptions items={info} column={2} bordered />` | `<Descriptions :items="info" :column="2" bordered />` |
-| **Tag** | color, closable, onClose | `<Tag color="success">已完成</Tag>` | `<Tag color="success">已完成</Tag>` |
+| **Tag** | color, closable, onClose | `<Tag color="success">已完�?/Tag>` | `<Tag color="success">已完�?/Tag>` |
 | **Badge** | count, dot, status, overflowCount | `<Badge count={5}><Icon /></Badge>` | `<Badge :count="5"><Icon /></Badge>` |
 | **Avatar** | src, size, shape, text, color | `<Avatar src={url} size="lg" shape="circle" />` | `<Avatar :src="url" size="lg" shape="circle" />` |
 | **Progress** | percent, status, type, showText, strokeWidth | `<Progress percent={80} status="active" />` | `<Progress :percent="80" status="active" />` |
-| **Statistic** | title, value, prefix, suffix, valueStyle, precision | `<Statistic title="用户数" value={1024} prefix="↑" />` | `<Statistic title="用户数" :value="1024" prefix="↑" />` |
+| **Statistic** | title, value, prefix, suffix, valueStyle, precision | `<Statistic title="用户�? value={1024} prefix="�? />` | `<Statistic title="用户�? :value="1024" prefix="�? />` |
 
 ---
 
-## 三、表单与输入（11个）
+## 三、表单与输入�?1个）
 
 | 组件 | Props | React 示例 | Vue 示例 |
 |------|-------|-----------|---------|
 | **Form** | initialValues, onFinish, layout, labelAlign | `<Form onFinish={submit} layout="vertical">...</Form>` | `<Form @finish="submit" layout="vertical">...</Form>` |
 | **Form.Item** | name, label, rules, required, error, help | `<Form.Item name="email" label="邮箱" rules={rules}>...</Form.Item>` | `<Form.Item name="email" label="邮箱" :rules="rules">...</Form.Item>` |
-| **Input** | placeholder, type, prefix, suffix, allowClear, maxLength, showCount | `<Input placeholder="用户名" allowClear />` | `<Input placeholder="用户名" :allowClear="true" />` |
+| **Input** | placeholder, type, prefix, suffix, allowClear, maxLength, showCount | `<Input placeholder="用户�? allowClear />` | `<Input placeholder="用户�? :allowClear="true" />` |
 | **TextArea** | rows, showCount, maxLength, autoSize | `<TextArea rows={4} showCount maxLength={200} />` | `<TextArea rows="4" showCount :maxLength="200" />` |
 | **Select** | options, multiple, searchable, allowClear | `<Select options={cities} searchable />` | `<Select :options="cities" searchable />` |
 | **DatePicker** | format, mode, onChange, placeholder | `<DatePicker format="YYYY-MM-DD" />` | `<DatePicker format="YYYY-MM-DD" />` |
@@ -51,21 +49,21 @@
 
 ---
 
-## 四、反馈与交互（7个）
+## 四、反馈与交互�?个）
 
 | 组件 | Props | React 示例 | Vue 示例 |
 |------|-------|-----------|---------|
 | **Button** | type, size, loading, block, danger, icon, onClick | `<Button type="primary" loading={s} block onClick={sub}>提交</Button>` | `<Button type="primary" :loading="s" block @click="sub">提交</Button>` |
 | **Modal** | title, visible, onOk, onCancel, footer, width | `<Modal title="提示" visible={o} onOk={ok} onCancel={close}>内容</Modal>` | `<Modal title="提示" :visible="o" @ok="ok" @cancel="close">内容</Modal>` |
-| **Toast** | API: Toast.show({ content, type, duration }) | `Toast.show({content:'成功', type:'success'})` | 同左侧 |
-| **Popconfirm** | title, onConfirm, onCancel, placement | `<Popconfirm title="确定删除？" onConfirm={del}><Button>删除</Button></Popconfirm>` | `<Popconfirm title="确定删除？" @confirm="del"><Button>删除</Button></Popconfirm>` |
+| **Toast** | API: Toast.show({ content, type, duration }) | `Toast.show({content:'成功', type:'success'})` | 同左�?|
+| **Popconfirm** | title, onConfirm, onCancel, placement | `<Popconfirm title="确定删除�? onConfirm={del}><Button>删除</Button></Popconfirm>` | `<Popconfirm title="确定删除�? @confirm="del"><Button>删除</Button></Popconfirm>` |
 | **Empty** | description, image | `<Empty description="暂无数据" />` | `<Empty description="暂无数据" />` |
 | **Skeleton** | loading, type, rows, animated | `<Skeleton loading type="list" rows={3}>...</Skeleton>` | `<Skeleton :loading :rows="3">...</Skeleton>` |
-| **Spin** | spinning, tip, size, fullscreen | `<Spin spinning={loading} tip="加载中">...</Spin>` | `<Spin :spinning="loading" tip="加载中">...</Spin>` |
+| **Spin** | spinning, tip, size, fullscreen | `<Spin spinning={loading} tip="加载�?>...</Spin>` | `<Spin :spinning="loading" tip="加载�?>...</Spin>` |
 
 ---
 
-## 五、移动端增强（4个）
+## 五、移动端增强�?个）
 
 | 组件 | Props | React 示例 | Vue 示例 |
 |------|-------|-----------|---------|
@@ -98,15 +96,13 @@ radius.sm    // 2px
 radius.md    // 4px
 radius.lg    // 8px
 radius.xl    // 12px
-radius.full  // 9999px（药丸形）
-```
+radius.full  // 9999px（药丸形�?```
 
 ---
 
 ## Props 类型速查
 
-所有 Props 类型统一从 `@aui/core` 导入：
-
+所�?Props 类型统一�?`@yaomingshan/core` 导入�?
 ```typescript
 import type {
   ButtonProps,
@@ -118,5 +114,5 @@ import type {
   ModalProps,
   PageProps,
   GridProps,
-} from '@aui/core';
+} from '@yaomingshan/core';
 ```

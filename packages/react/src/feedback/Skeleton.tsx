@@ -1,8 +1,7 @@
 /**
- * Skeleton 骨架屏
- *
+ * Skeleton 骨架�? *
  * @example React
- * import { Skeleton } from '@aui/react';
+ * import { Skeleton } from '@yaomingshan/react';
  * <Skeleton loading={true} type="list" rows={3}>
  *   <div>真实内容</div>
  * </Skeleton>
@@ -14,7 +13,7 @@
  */
 
 import React, { useMemo } from 'react';
-import { type SkeletonProps, cx } from '@aui/core';
+import { type SkeletonProps, cx } from '@yaomingshan/core';
 
 export const Skeleton = React.forwardRef<HTMLDivElement, SkeletonProps>(
   ({ loading = true, type = 'text', rows = 3, animated = true, width, height, className, children, ...rest }, ref) => {

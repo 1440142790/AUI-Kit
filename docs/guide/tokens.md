@@ -1,11 +1,10 @@
 # 设计令牌
 
-AUI Kit 使用设计令牌来保证视觉一致性，所有令牌从 `@aui/core` 统一导出。
-
+AUI Kit 使用设计令牌来保证视觉一致性，所有令牌从 `@yaomingshan/core` 统一导出�?
 ## 颜色系统
 
 ```typescript
-import { colors } from '@aui/core';
+import { colors } from '@yaomingshan/core';
 
 colors.primary.DEFAULT  // #1677ff
 colors.primary.light     // #69b1ff
@@ -27,7 +26,7 @@ colors.danger.dark      // #d9363e
 ## 间距系统
 
 ```typescript
-import { spacing, spacingKeys } from '@aui/core';
+import { spacing, spacingKeys } from '@yaomingshan/core';
 
 // spacingKeys: ['xs', 'sm', 'md', 'lg', 'xl', '2xl', '3xl']
 
@@ -43,20 +42,19 @@ spacing['3xl'] // '48px'
 ## 圆角系统
 
 ```typescript
-import { radius, radiusKeys } from '@aui/core';
+import { radius, radiusKeys } from '@yaomingshan/core';
 
 radius.none   // '0'
 radius.sm     // '2px'
 radius.md     // '4px'
 radius.lg     // '8px'
 radius.xl     // '12px'
-radius.full   // '9999px'（药丸形）
-```
+radius.full   // '9999px'（药丸形�?```
 
 ## 字号系统
 
 ```typescript
-import { fontSize } from '@aui/core';
+import { fontSize } from '@yaomingshan/core';
 
 fontSize.xs    // 'text-[12px]'
 fontSize.sm    // 'text-[12px]'
@@ -71,33 +69,28 @@ fontSize['4xl'] // 'text-[30px]'
 ## 阴影系统
 
 ```typescript
-import { shadows } from '@aui/core';
+import { shadows } from '@yaomingshan/core';
 
 shadows.sm    // 轻微阴影
 shadows.md    // 中等阴影
-shadows.lg    // 大阴影
-shadows.xl    // 特大阴影
-shadows.inner // 内阴影
-shadows.none  // 无阴影
-```
+shadows.lg    // 大阴�?shadows.xl    // 特大阴影
+shadows.inner // 内阴�?shadows.none  // 无阴�?```
 
 ## 组件尺寸映射
 
 ```typescript
-import { componentSizes, type Size } from '@aui/core';
+import { componentSizes, type Size } from '@yaomingshan/core';
 
 const size = componentSizes.md;
-// size.h   → 'h-10'
-// size.text → 'text-base'
-// size.px  → 'px-4'
+// size.h   �?'h-10'
+// size.text �?'text-base'
+// size.px  �?'px-4'
 ```
 
-## 在 Tailwind 中使用
-
-所有令牌都设计为与 Tailwind CSS 配合使用：
-
+## �?Tailwind 中使�?
+所有令牌都设计为与 Tailwind CSS 配合使用�?
 ```tsx
-import { colors, spacing } from '@aui/core';
+import { colors, spacing } from '@yaomingshan/core';
 
 <div
   className={cx(
@@ -110,13 +103,13 @@ import { colors, spacing } from '@aui/core';
 </div>
 ```
 
-## 自定义 Tailwind 配置
+## 自定�?Tailwind 配置
 
 将令牌注册到 Tailwind 配置中：
 
 ```ts
 // tailwind.config.ts
-import { colors, spacing, radius } from '@aui/core';
+import { colors, spacing, radius } from '@yaomingshan/core';
 
 export default {
   theme: {

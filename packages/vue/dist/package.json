@@ -1,5 +1,5 @@
 {
-  "name": "@aui/vue",
+  "name": "@yaomingshan/vue",
   "version": "0.1.0-alpha",
   "type": "module",
   "main": "./index.js",

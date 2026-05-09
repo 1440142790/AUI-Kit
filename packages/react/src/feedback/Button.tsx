@@ -1,10 +1,9 @@
 /**
  * Button 按钮
  *
- * @fileoverview 按钮组件，支持多种类型、尺寸和状态
- *
+ * @fileoverview 按钮组件，支持多种类型、尺寸和状�? *
  * @example React
- * import { Button } from '@aui/react';
+ * import { Button } from '@yaomingshan/react';
  *
  * // 基本用法
  * <Button>默认按钮</Button>
@@ -12,15 +11,14 @@
  * // 主要按钮
  * <Button type="primary">提交</Button>
  *
- * // 加载状态
- * <Button type="primary" loading={submitting} onClick={handleSubmit}>提交</Button>
+ * // 加载状�? * <Button type="primary" loading={submitting} onClick={handleSubmit}>提交</Button>
  *
  * // 危险操作
  * <Button type="primary" danger onClick={handleDelete}>删除</Button>
  *
  * @example Vue
  * <script setup>
- * import { Button } from '@aui/vue';
+ * import { Button } from '@yaomingshan/vue';
  * const submitting = ref(false);
  * </script>
  * <template>
@@ -29,10 +27,10 @@
  */
 
 import React, { useMemo } from 'react';
-import { type ButtonProps, type Size } from '@aui/core';
-import { cx } from '@aui/core';
+import { type ButtonProps, type Size } from '@yaomingshan/core';
+import { cx } from '@yaomingshan/core';
 
-/** 按钮类型到 Tailwind 类名的映射 */
+/** 按钮类型�?Tailwind 类名的映�?*/
 const typeClasses = {
   primary: 'bg-[#1677ff] text-white hover:bg-[#4096ff] active:bg-[#0958d9] disabled:bg-[#e8e8e8] disabled:text-[#bfbfbf]',
   default: 'bg-white text-[#262626] border border-[#d9d9d9] hover:border-[#4096ff] hover:text-[#4096ff] active:border-[#0958d9] active:text-[#0958d9] disabled:border-[#e8e8e8] disabled:text-[#bfbfbf]',

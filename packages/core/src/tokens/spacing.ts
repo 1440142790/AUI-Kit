@@ -1,13 +1,12 @@
 /**
- * AUI Kit 设计令牌 - 尺寸与间距系统
- *
+ * AUI Kit 设计令牌 - 尺寸与间距系�? *
  * @example
  * // React
- * import { spacing, radius } from '@aui/core';
+ * import { spacing, radius } from '@yaomingshan/core';
  * <div style={{ padding: spacing.md, borderRadius: radius.md }}>内容</div>
  *
  * // Vue
- * import { spacing, radius } from '@aui/core';
+ * import { spacing, radius } from '@yaomingshan/core';
  * <div :style="{ padding: spacing.md, borderRadius: radius.md }">内容</div>
  */
 
@@ -22,7 +21,7 @@ export const spacing = {
   '3xl': '48px',
 } as const;
 
-/** 间距枚举值（用于 Props） */
+/** 间距枚举值（用于 Props�?*/
 export const spacingKeys = ['xs', 'sm', 'md', 'lg', 'xl', '2xl', '3xl'] as const;
 export type SpacingKey = typeof spacingKeys[number];
 
@@ -37,7 +36,7 @@ export const radius = {
   full:   '9999px',
 } as const;
 
-/** 圆角枚举值 */
+/** 圆角枚举�?*/
 export const radiusKeys = ['none', 'sm', 'md', 'lg', 'xl', '2xl', 'full'] as const;
 export type RadiusKey = typeof radiusKeys[number];
 

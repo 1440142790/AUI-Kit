@@ -1,13 +1,12 @@
 /**
- * DatePicker 日期选择器
- *
+ * DatePicker 日期选择�? *
  * @example React
- * import { DatePicker } from '@aui/react';
+ * import { DatePicker } from '@yaomingshan/react';
  * <DatePicker format="YYYY-MM-DD" mode="date" onChange={(val) => console.log(val)} />
  */
 
 import React, { useState } from 'react';
-import { type DatePickerProps, cx } from '@aui/core';
+import { type DatePickerProps, cx } from '@yaomingshan/core';
 
 export const DatePicker = React.forwardRef<HTMLDivElement, DatePickerProps>(
   ({ format = 'YYYY-MM-DD', mode = 'date', value, defaultValue, placeholder = '请选择日期', disabled = false, onChange, className, ...rest }, ref) => {

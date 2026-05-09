@@ -2,12 +2,12 @@
  * Upload 上传
  *
  * @example React
- * import { Upload } from '@aui/react';
+ * import { Upload } from '@yaomingshan/react';
  * <Upload action="/api/upload" listType="picture" maxCount={3} />
  */
 
 import React, { useState, useRef } from 'react';
-import { type UploadProps, type UploadFile, cx } from '@aui/core';
+import { type UploadProps, type UploadFile, cx } from '@yaomingshan/core';
 
 export const Upload = React.forwardRef<HTMLDivElement, UploadProps>(
   ({ action, listType = 'text', maxCount, fileList = [], defaultFileList = [], multiple = false, draggable = false, accept, onChange, beforeUpload, className, ...rest }, ref) => {

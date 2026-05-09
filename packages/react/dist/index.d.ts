@@ -1,6 +1,5 @@
 /**
- * AUI Kit - React 组件库类型声明
- * Props 类型定义源自 @aui/core
+ * AUI Kit - React 组件库类型声�? * Props 类型定义源自 @yaomingshan/core
  */
 /// <reference types="react" />
 export { Page } from './src/layout/Page';

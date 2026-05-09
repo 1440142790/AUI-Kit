@@ -1,9 +1,7 @@
 /**
- * @aui/vue 本地类型声明
+ * @yaomingshan/vue 本地类型声明
  *
- * 这些类型和函数来自 @aui/core，在 vue 包内做本地副本
- * 以避免 Vue SFC 编译器无法解析 workspace 依赖的问题。
- * @aui/core 的实际类型定义在 packages/core/src/types/components.ts
+ * 这些类型和函数来�?@yaomingshan/core，在 vue 包内做本地副�? * 以避�?Vue SFC 编译器无法解�?workspace 依赖的问题�? * @yaomingshan/core 的实际类型定义在 packages/core/src/types/components.ts
  */
 
 import type { ExtractDefaultTypes, PropType } from 'vue';
@@ -21,8 +19,7 @@ export type Direction = 'horizontal' | 'vertical';
 export type Placement = 'top' | 'bottom' | 'left' | 'right' | 'topLeft' | 'topRight' | 'bottomLeft' | 'bottomRight';
 
 // ============================================================
-// Props 接口（来自 @aui/core）
-// ============================================================
+// Props 接口（来�?@yaomingshan/core�?// ============================================================
 
 export interface BaseComponentProps {
   className?: string;
@@ -430,8 +427,7 @@ export interface IndexBarProps extends BaseComponentProps {
 // ============================================================
 
 /**
- * 类名拼接（来自 @aui/core/utils）
- */
+ * 类名拼接（来�?@yaomingshan/core/utils�? */
 export function cx(...classes: (string | undefined | null | false)[]): string {
   return classes.filter(Boolean).join(' ');
 }

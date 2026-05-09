@@ -2,13 +2,13 @@
  * Menu 菜单
  *
  * @example React
- * import { Menu } from '@aui/react';
+ * import { Menu } from '@yaomingshan/react';
  * const items = [{ key: 'home', label: '首页' }, { key: 'user', label: '用户', children: [...] }];
  * <Menu items={items} mode="inline" activeKey={active} onChange={setActive} />
  */
 
 import React, { useState } from 'react';
-import { type MenuProps, type MenuItem, cx } from '@aui/core';
+import { type MenuProps, type MenuItem, cx } from '@yaomingshan/core';
 
 export const Menu = React.forwardRef<HTMLDivElement, MenuProps>(
   ({ items = [], mode = 'inline', collapsed = false, activeKey, onChange, className, ...rest }, ref) => {

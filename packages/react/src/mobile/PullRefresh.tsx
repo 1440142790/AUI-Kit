@@ -2,17 +2,17 @@
  * PullRefresh 下拉刷新
  *
  * @example React
- * import { PullRefresh } from '@aui/react';
+ * import { PullRefresh } from '@yaomingshan/react';
  * <PullRefresh onRefresh={handleRefresh} refreshing={refreshing}>
  *   <List dataSource={data} />
  * </PullRefresh>
  */
 
 import React, { useState, useRef } from 'react';
-import { type PullRefreshProps, cx } from '@aui/core';
+import { type PullRefreshProps, cx } from '@yaomingshan/core';
 
 export const PullRefresh = React.forwardRef<HTMLDivElement, PullRefreshProps>(
-  ({ onRefresh, refreshing = false, pullingText = '下拉刷新', refreshingText = '刷新中...', completedText = '刷新完成', children, className, ...rest }, ref) => {
+  ({ onRefresh, refreshing = false, pullingText = '下拉刷新', refreshingText = '刷新�?..', completedText = '刷新完成', children, className, ...rest }, ref) => {
     const [pulling, setPulling] = useState(false);
     const [pullDistance, setPullDistance] = useState(0);
     const startYRef = useRef(0);

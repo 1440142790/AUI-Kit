@@ -1,14 +1,13 @@
 /**
- * IndexBar 索引列表（移动端）
- *
+ * IndexBar 索引列表（移动端�? *
  * @example React
- * import { IndexBar } from '@aui/react';
+ * import { IndexBar } from '@yaomingshan/react';
  * const data = [{ index: 'A', items: [{ key: '1', title: '张三' }] }];
  * <IndexBar data={data} onSelect={(item) => console.log(item)} />
  */
 
 import React, { useState } from 'react';
-import { type IndexBarProps, type IndexBarItem, cx } from '@aui/core';
+import { type IndexBarProps, type IndexBarItem, cx } from '@yaomingshan/core';
 
 export const IndexBar = React.forwardRef<HTMLDivElement, IndexBarProps>(
   ({ data = [], onSelect, showAnchor = true, indexes, className, ...rest }, ref) => {
@@ -22,7 +21,7 @@ export const IndexBar = React.forwardRef<HTMLDivElement, IndexBarProps>(
 
     return (
       <div ref={ref} className={cx('flex h-full', className)} {...rest}>
-        {/* 主内容 */}
+        {/* 主内�?*/}
         <div className="flex-1 overflow-auto px-4">
           {data.map((group) => (
             <div key={group.index} className="mb-4">

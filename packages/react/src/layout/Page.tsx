@@ -4,7 +4,7 @@
  * @fileoverview 带导航栏的页面容器，自动处理平台适配
  *
  * @example React
- * import { Page } from '@aui/react';
+ * import { Page } from '@yaomingshan/react';
  *
  * <Page title="用户详情" onBack={() => navigate(-1)}>
  *   <div>页面内容</div>
@@ -17,7 +17,7 @@
  */
 
 import React, { useMemo } from 'react';
-import { type PageProps, cx } from '@aui/core';
+import { type PageProps, cx } from '@yaomingshan/core';
 
 export const Page = React.forwardRef<HTMLDivElement, PageProps>(
   (

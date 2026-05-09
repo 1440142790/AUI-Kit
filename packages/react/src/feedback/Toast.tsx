@@ -1,24 +1,23 @@
 /**
- * Toast 轻提示
- *
+ * Toast 轻提�? *
  * @fileoverview 命令式调用的全局 Toast 服务
  *
  * @example React
- * import { Toast } from '@aui/react';
+ * import { Toast } from '@yaomingshan/react';
  * Toast.show({ content: '保存成功', type: 'success' });
- * Toast.success('保存成功！');
+ * Toast.success('保存成功�?);
  * Toast.error('网络错误');
- * Toast.loading('提交中...');
+ * Toast.loading('提交�?..');
  *
  * @example Vue
- * import { Toast } from '@aui/react';
- * Toast.success('保存成功！');
+ * import { Toast } from '@yaomingshan/react';
+ * Toast.success('保存成功�?);
  */
 
 import React, { createElement } from 'react';
 import { createRoot } from 'react-dom/client';
-import type { ToastOptions } from '@aui/core';
-import { cx } from '@aui/core';
+import type { ToastOptions } from '@yaomingshan/core';
+import { cx } from '@yaomingshan/core';
 
 // ============================================================
 // Toast Root Container（单例）

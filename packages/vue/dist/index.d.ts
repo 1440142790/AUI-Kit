@@ -1,6 +1,5 @@
 /**
- * AUI Kit - Vue 3 组件库类型声明
- * Props 类型定义源自 @aui/core
+ * AUI Kit - Vue 3 组件库类型声�? * Props 类型定义源自 @yaomingshan/core
  */
 import type { DefineComponent } from 'vue';
 

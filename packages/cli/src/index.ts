@@ -1,10 +1,8 @@
 #!/usr/bin/env node
 
 /**
- * AUI Kit CLI - 项目初始化工具
- *
- * 用法：
- *   npx @aui/cli init --framework react
+ * AUI Kit CLI - 项目初始化工�? *
+ * 用法�? *   npx @aui/cli init --framework react
  *   npx @aui/cli init --framework vue
  *   npx @aui/cli init --framework react --project my-app
  */
@@ -18,25 +16,25 @@ const program = new Command();
 
 program
   .name('aui')
-  .description('AUI Kit CLI - AI 时代的跨框架 UI 组件体系初始化工具')
+  .description('AUI Kit CLI - AI 时代的跨框架 UI 组件体系初始化工�?)
   .version('0.1.0-alpha');
 
 program
   .command('init')
-  .description('初始化 AUI Kit 项目')
-  .requiredOption('-f, --framework <framework>', '框架类型：react 或 vue')
+  .description('初始�?AUI Kit 项目')
+  .requiredOption('-f, --framework <framework>', '框架类型：react �?vue')
   .option('-p, --project <name>', '项目名称', 'my-aui-app')
   .option('-t, --typescript', '使用 TypeScript', true)
   .action(async (options) => {
     const { framework, project, typescript } = options;
     if (!['react', 'vue'].includes(framework)) {
-      console.error(pc.red(`✖ 不支持的框架: ${framework}，请使用 react 或 vue`));
+      console.error(pc.red(`�?不支持的框架: ${framework}，请使用 react �?vue`));
       process.exit(1);
     }
 
     const targetDir = path.resolve(process.cwd(), project);
     if (await fs.pathExists(targetDir)) {
-      console.error(pc.red(`✖ 目录已存在: ${project}`));
+      console.error(pc.red(`�?目录已存�? ${project}`));
       process.exit(1);
     }
 
@@ -56,19 +54,19 @@ program
         preview: 'vite preview',
       },
       dependencies: framework === 'react'
-        ? { react: '^18.3.0', 'react-dom': '^18.3.0', '@aui/react': 'workspace:*', '@aui/core': 'workspace:*' }
-        : { vue: '^3.4.0', '@aui/vue': 'workspace:*', '@aui/core': 'workspace:*' },
+        ? { react: '^18.3.0', 'react-dom': '^18.3.0', '@yaomingshan/react': 'workspace:*', '@yaomingshan/core': 'workspace:*' }
+        : { vue: '^3.4.0', '@yaomingshan/vue': 'workspace:*', '@yaomingshan/core': 'workspace:*' },
       devDependencies: {
         typescript: '^5.4.0',
         vite: '^5.0.0',
-        '@aui/core': 'workspace:*',
+        '@yaomingshan/core': 'workspace:*',
         tailwindcss: '^3.4.0',
         autoprefixer: '^10.4.0',
         postcss: '^8.4.0',
       },
     };
     await fs.writeFile(path.join(targetDir, 'package.json'), JSON.stringify(pkg, null, 2));
-    console.log(pc.green('✓ package.json'));
+    console.log(pc.green('�?package.json'));
 
     // 2. 生成 tailwind.config.ts
     const tailwindConfig = `import type { Config } from 'tailwindcss';
@@ -89,7 +87,7 @@ export default {
 } satisfies Config;
 `;
     await fs.writeFile(path.join(targetDir, 'tailwind.config.ts'), tailwindConfig);
-    console.log(pc.green('✓ tailwind.config.ts'));
+    console.log(pc.green('�?tailwind.config.ts'));
 
     // 3. 生成 postcss.config.js
     await fs.writeFile(path.join(targetDir, 'postcss.config.js'), `export default {
@@ -99,7 +97,7 @@ export default {
   },
 };
 `);
-    console.log(pc.green('✓ postcss.config.js'));
+    console.log(pc.green('�?postcss.config.js'));
 
     // 4. 生成 AI 宪法 .cursorrules
     const cursorRules = `\
@@ -107,86 +105,65 @@ export default {
 
 ## 核心原则
 
-你是一个 AUI Kit 专家，负责为用户生成高质量、跨平台一致的前端界面。
-
+你是一�?AUI Kit 专家，负责为用户生成高质量、跨平台一致的前端界面�?
 ## 通用规则（所有框架必须遵守）
 
 1. **强制使用 AUI 组件**
-   - 所有 UI 必须使用 \`@aui/react\` 或 \`@aui/vue\` 组件
+   - 所�?UI 必须使用 \`@yaomingshan/react\` �?\`@yaomingshan/vue\` 组件
    - 禁止使用原生 HTML 标签（div, span, button 等）构建 UI
-   - 唯一例外：布局容器（page、grid、flex 已覆盖的场景）
-
+   - 唯一例外：布局容器（page、grid、flex 已覆盖的场景�?
 2. **禁止手写 CSS**
-   - 所有样式必须通过 Tailwind 类实现
-   - 使用设计令牌颜色（primary, success, warning, danger, info, gray）
-   - 使用尺寸令牌（xs, sm, md, lg, xl）
-
-3. **表单必须包裹在 Form + Form.Item 内**
-   - 所有输入组件必须包裹在 \`<Form.Item>\` 内
-   - Form.Item 必须有 \`name\` 属性对应字段名
+   - 所有样式必须通过 Tailwind 类实�?   - 使用设计令牌颜色（primary, success, warning, danger, info, gray�?   - 使用尺寸令牌（xs, sm, md, lg, xl�?
+3. **表单必须包裹�?Form + Form.Item �?*
+   - 所有输入组件必须包裹在 \`<Form.Item>\` �?   - Form.Item 必须�?\`name\` 属性对应字段名
 
 4. **移动端适配**
-   - 在 Page 组件设置 \`platform="mobile"\`
+   - �?Page 组件设置 \`platform="mobile"\`
    - Modal 在移动端自动转为 BottomSheet
    - Table 在移动端自动转为 CardList
 
-5. **组件速查表优先**
-   - 优先使用速查表中的组件
-   - 非必要不组合新样式
-
-## React 方言（.tsx/.jsx 文件）
-- 使用 JSX 语法
-- Props 属性使用 camelCase
+5. **组件速查表优�?*
+   - 优先使用速查表中的组�?   - 非必要不组合新样�?
+## React 方言�?tsx/.jsx 文件�?- 使用 JSX 语法
+- Props 属性使�?camelCase
 - 事件处理：\`onClick={handler}\`，\`onChange={handler}\`
 - 布尔属性：\`loading={true}\`（不能省略）
-- 样式：通过 Tailwind 类或 style 属性
-
-## Vue 方言（.vue 文件）
-- 使用 \`<template>\` 语法
-- Props 属性使用 kebab-case 或 camelCase
+- 样式：通过 Tailwind 类或 style 属�?
+## Vue 方言�?vue 文件�?- 使用 \`<template>\` 语法
+- Props 属性使�?kebab-case �?camelCase
 - 事件处理：\`@click="handler"\`，\`@change="handler"\`
-- 布尔属性：\`:loading="true"\`（不能省略 v-bind 前缀）
-- v-model：\`v-model="value"\`
+- 布尔属性：\`:loading="true"\`（不能省�?v-bind 前缀�?- v-model：\`v-model="value"\`
 
-## 组件速查表
-
-| 组件      | 用途       | React 片段                                      | Vue 片段                                           |
+## 组件速查�?
+| 组件      | 用�?      | React 片段                                      | Vue 片段                                           |
 |-----------|------------|-------------------------------------------------|----------------------------------------------------|
 | Page      | 页面容器   | \`<Page title="首页"><Content /></Page>\`         | \`<Page title="首页"><Content /></Page>\`           |
 | Grid      | 栅格       | \`<Grid cols={2} gap="md">...</Grid>\`            | \`<Grid cols="2" gap="md">...</Grid>\`              |
 | Table     | 表格       | \`<Table columns={cols} dataSource={data} />\`   | \`<Table :columns="cols" :dataSource="data" />\`    |
 | Form      | 表单       | \`<Form onFinish={submit}>...</Form>\`            | \`<Form @finish="submit">...</Form>\`               |
-| Form.Item | 表单项     | \`<Form.Item name="email" label="邮箱">...</Form.Item>\` | \`<Form.Item name="email" label="邮箱">...</Form.Item>\` |
+| Form.Item | 表单�?    | \`<Form.Item name="email" label="邮箱">...</Form.Item>\` | \`<Form.Item name="email" label="邮箱">...</Form.Item>\` |
 | Button    | 按钮       | \`<Button type="primary" onClick={save}>保存</Button>\` | \`<Button type="primary" @click="save">保存</Button>\` |
 | Modal     | 弹窗       | \`<Modal visible={open} onOk={submit}>...</Modal>\` | \`<Modal :visible="open" @ok="submit">...</Modal>\`  |
-| Input     | 输入框     | \`<Input placeholder="用户名" />\`               | \`<Input placeholder="用户名" />\`                  |
-| Select    | 选择器     | \`<Select options={opts} />\`                     | \`<Select :options="opts" />\`                      |
+| Input     | 输入�?    | \`<Input placeholder="用户�? />\`               | \`<Input placeholder="用户�? />\`                  |
+| Select    | 选择�?    | \`<Select options={opts} />\`                     | \`<Select :options="opts" />\`                      |
 | Tag       | 标签       | \`<Tag color="success">完成</Tag>\`               | \`<Tag color="success">完成</Tag>\`                |
 | Badge     | 徽标       | \`<Badge count={5}><Icon /></Badge>\`            | \`<Badge :count="5"><Icon /></Badge>\`             |
 | Avatar    | 头像       | \`<Avatar src={url} size="lg" />\`               | \`<Avatar :src="url" size="lg" />\`               |
-| Empty     | 空状态     | \`<Empty description="暂无数据" />\`             | \`<Empty description="暂无数据" />\`               |
-| Skeleton  | 骨架屏     | \`<Skeleton loading type="list" rows={3} />\`    | \`<Skeleton :loading type="list" :rows="3" />\`    |
-| Spin      | 加载       | \`<Spin spinning={loading} tip="加载中" />\`    | \`<Spin :spinning="loading" tip="加载中" />\`      |
+| Empty     | 空状�?    | \`<Empty description="暂无数据" />\`             | \`<Empty description="暂无数据" />\`               |
+| Skeleton  | 骨架�?    | \`<Skeleton loading type="list" rows={3} />\`    | \`<Skeleton :loading type="list" :rows="3" />\`    |
+| Spin      | 加载       | \`<Spin spinning={loading} tip="加载�? />\`    | \`<Spin :spinning="loading" tip="加载�? />\`      |
 
 ## 输出规范
 
 生成代码时：
-1. 优先使用 \`@aui/react\` 或 \`@aui/vue\` 的组件
-2. 禁止手写 CSS，使用 Tailwind 类
-3. Props 保持 React/Vue 双版本一致
-4. 每个组件包含完整 Props 类型定义
-5. 移除所有 \`any\` 类型，使用正确类型
-`;
+1. 优先使用 \`@yaomingshan/react\` �?\`@yaomingshan/vue\` 的组�?2. 禁止手写 CSS，使�?Tailwind �?3. Props 保持 React/Vue 双版本一�?4. 每个组件包含完整 Props 类型定义
+5. 移除所�?\`any\` 类型，使用正确类�?`;
     await fs.writeFile(path.join(targetDir, '.cursorrules'), cursorRules);
-    console.log(pc.green('✓ .cursorrules (AI 宪法)'));
+    console.log(pc.green('�?.cursorrules (AI 宪法)'));
 
-    // 5. 生成组件速查表文档
-    const componentRef = `# AUI Kit 组件速查表
-
-> AI 生成代码时参考此文档，确保 React/Vue 双框架 API 完全一致。
-
-## 布局与导航
-
+    // 5. 生成组件速查表文�?    const componentRef = `# AUI Kit 组件速查�?
+> AI 生成代码时参考此文档，确�?React/Vue 双框�?API 完全一致�?
+## 布局与导�?
 | 组件 | Props | React 示例 | Vue 示例 |
 |------|-------|-----------|---------|
 | Page | title, showNav, onBack | \`<Page title="用户" onBack={goBack}>...</Page>\` | \`<Page title="用户" @back="goBack">...</Page>\` |
@@ -204,19 +181,18 @@ export default {
 | Table | columns, dataSource, pagination | \`<Table columns={cols} dataSource={data} />\` | \`<Table :columns="cols" :dataSource="data" />\` |
 | CardList | dataSource, renderItem, columns | \`<CardList dataSource={list} renderItem={render} />\` | \`<CardList :dataSource="list" :renderItem="render" />\` |
 | Descriptions | items, column, bordered | \`<Descriptions items={info} column={2} bordered />\` | \`<Descriptions :items="info" :column="2" bordered />\` |
-| Tag | color, closable, onClose | \`<Tag color="success">已完成</Tag>\` | \`<Tag color="success">已完成</Tag>\` |
+| Tag | color, closable, onClose | \`<Tag color="success">已完�?/Tag>\` | \`<Tag color="success">已完�?/Tag>\` |
 | Badge | count, dot, status | \`<Badge count={5}><Icon /></Badge>\` | \`<Badge :count="5"><Icon /></Badge>\` |
 | Avatar | src, size, shape | \`<Avatar src={url} size="lg" shape="circle" />\` | \`<Avatar :src="url" size="lg" shape="circle" />\` |
 | Progress | percent, status, type | \`<Progress percent={80} status="active" />\` | \`<Progress :percent="80" status="active" />\` |
-| Statistic | title, value, prefix, suffix | \`<Statistic title="用户数" value={1024} prefix="↑" />\` | \`<Statistic title="用户数" :value="1024" prefix="↑" />\` |
+| Statistic | title, value, prefix, suffix | \`<Statistic title="用户�? value={1024} prefix="�? />\` | \`<Statistic title="用户�? :value="1024" prefix="�? />\` |
 
-## 表单与输入
-
+## 表单与输�?
 | 组件 | Props | React 示例 | Vue 示例 |
 |------|-------|-----------|---------|
 | Form | initialValues, onFinish, layout | \`<Form onFinish={submit} layout="vertical">...</Form>\` | \`<Form @finish="submit" layout="vertical">...</Form>\` |
 | Form.Item | name, label, rules, required | \`<Form.Item name="email" label="邮箱" rules={rules}><Input /></Form.Item>\` | \`<Form.Item name="email" label="邮箱" :rules="rules"><Input /></Form.Item>\` |
-| Input | placeholder, type, prefix, allowClear | \`<Input placeholder="用户名" allowClear />\` | \`<Input placeholder="用户名" :allowClear="true" />\` |
+| Input | placeholder, type, prefix, allowClear | \`<Input placeholder="用户�? allowClear />\` | \`<Input placeholder="用户�? :allowClear="true" />\` |
 | TextArea | rows, showCount, maxLength | \`<TextArea rows={4} showCount maxLength={200} />\` | \`<TextArea rows="4" showCount :maxLength="200" />\` |
 | Select | options, multiple, searchable | \`<Select options={cities} searchable />\` | \`<Select :options="cities" searchable />\` |
 | DatePicker | format, mode, onChange | \`<DatePicker format="YYYY-MM-DD" />\` | \`<DatePicker format="YYYY-MM-DD" />\` |
@@ -226,20 +202,18 @@ export default {
 | Checkbox | options, checkAll, onChange | \`<Checkbox options={items} />\` | \`<Checkbox :options="items" />\` |
 | Rate | count, allowHalf, onChange | \`<Rate count={5} allowHalf />\` | \`<Rate :count="5" :allowHalf="true" />\` |
 
-## 反馈与交互
-
+## 反馈与交�?
 | 组件 | Props | React 示例 | Vue 示例 |
 |------|-------|-----------|---------|
 | Button | type, loading, block, onClick | \`<Button type="primary" loading={s} block onClick={sub}>提交</Button>\` | \`<Button type="primary" :loading="s" block @click="sub">提交</Button>\` |
 | Modal | title, visible, onOk, onCancel | \`<Modal title="提示" visible={o} onOk={ok} onCancel={close}>内容</Modal>\` | \`<Modal title="提示" :visible="o" @ok="ok" @cancel="close">内容</Modal>\` |
-| Toast | API: Toast.show({ content, type, duration }) | \`Toast.show({content:'成功', type:'success'})\` | 同左侧 |
-| Popconfirm | title, onConfirm, onCancel | \`<Popconfirm title="确定删除？" onConfirm={del}><Button>删除</Button></Popconfirm>\` | \`<Popconfirm title="确定删除？" @confirm="del"><Button>删除</Button></Popconfirm>\` |
+| Toast | API: Toast.show({ content, type, duration }) | \`Toast.show({content:'成功', type:'success'})\` | 同左�?|
+| Popconfirm | title, onConfirm, onCancel | \`<Popconfirm title="确定删除�? onConfirm={del}><Button>删除</Button></Popconfirm>\` | \`<Popconfirm title="确定删除�? @confirm="del"><Button>删除</Button></Popconfirm>\` |
 | Empty | description, image | \`<Empty description="暂无数据" />\` | \`<Empty description="暂无数据" />\` |
 | Skeleton | loading, type, rows, animated | \`<Skeleton loading type="list" rows={3}><Content /></Skeleton>\` | \`<Skeleton :loading :type="\\'list\\'" :rows="3"><Content /></Skeleton>\` |
-| Spin | spinning, tip, fullscreen | \`<Spin spinning={loading} tip="加载中" />\` | \`<Spin :spinning="loading" tip="加载中" />\` |
+| Spin | spinning, tip, fullscreen | \`<Spin spinning={loading} tip="加载�? />\` | \`<Spin :spinning="loading" tip="加载�? />\` |
 
-## 移动端增强
-
+## 移动端增�?
 | 组件 | Props | React 示例 | Vue 示例 |
 |------|-------|-----------|---------|
 | BottomSheet | visible, height, actions, onClose | \`<BottomSheet visible={s} actions={actions} />\` | \`<BottomSheet :visible="s" :actions="actions" />\` |
@@ -248,7 +222,7 @@ export default {
 | IndexBar | data, onSelect, showAnchor | \`<IndexBar data={contacts} onSelect={sel} />\` | \`<IndexBar :data="contacts" @select="sel" />\` |
 `;
     await fs.writeFile(path.join(targetDir, 'AUI-COMPONENT-REF.md'), componentRef);
-    console.log(pc.green('✓ AUI-COMPONENT-REF.md'));
+    console.log(pc.green('�?AUI-COMPONENT-REF.md'));
 
     // 6. 生成 src 目录结构
     await fs.ensureDir(path.join(targetDir, 'src'));
@@ -257,7 +231,7 @@ export default {
         `import React from 'react';\nimport ReactDOM from 'react-dom/client';\nimport App from './App';\nimport './index.css';\n\nReactDOM.createRoot(document.getElementById('root')!).render(\n  <React.StrictMode>\n    <App />\n  </React.StrictMode>\n);\n`
       );
       await fs.writeFile(path.join(targetDir, 'src/App.tsx'),
-        `import { Page, Grid, Button, Input, Select } from '@aui/react';
+        `import { Page, Grid, Button, Input, Select } from '@yaomingshan/react';
 
 const options = [
   { label: '选项 A', value: 'a' },
@@ -268,7 +242,7 @@ function App() {
   return (
     <Page title="AUI Kit React 示例">
       <Grid cols={2} gap="md" className="p-4">
-        <Input placeholder="请输入内容" />
+        <Input placeholder="请输入内�? />
         <Select options={options} placeholder="请选择" />
         <div className="col-span-2 flex gap-3">
           <Button type="primary">主要按钮</Button>
@@ -292,7 +266,7 @@ n\ncreateApp(App).mount('#app');\n`
       );
       await fs.writeFile(path.join(targetDir, 'src/App.vue'),
         `<script setup lang="ts">
-import { Page, Grid, Button, Input, Select } from '@aui/vue';
+import { Page, Grid, Button, Input, Select } from '@yaomingshan/vue';
 
 const options = [
   { label: '选项 A', value: 'a' },
@@ -303,7 +277,7 @@ const options = [
 <template>
   <Page title="AUI Kit Vue 示例">
     <Grid :cols="2" gap="md" class="p-4">
-      <Input placeholder="请输入内容" />
+      <Input placeholder="请输入内�? />
       <Select :options="options" placeholder="请选择" />
       <div class="col-span-2 flex gap-3">
         <Button type="primary">主要按钮</Button>
@@ -316,7 +290,7 @@ const options = [
       );
       await fs.writeFile(path.join(targetDir, 'src/style.css'), '@tailwind base;\n@tailwind components;\n@tailwind utilities;\n');
     }
-    console.log(pc.green('✓ src/'));
+    console.log(pc.green('�?src/'));
 
     // 7. 生成 index.html
     await fs.writeFile(path.join(targetDir, 'index.html'),
@@ -334,7 +308,7 @@ const options = [
   </body>
 </html>\n`
     );
-    console.log(pc.green('✓ index.html'));
+    console.log(pc.green('�?index.html'));
 
     // 8. 生成 vite.config.ts
     await fs.writeFile(path.join(targetDir, 'vite.config.ts'),
@@ -345,20 +319,20 @@ export default defineConfig({
   plugins: [vue()],
   resolve: {
     alias: {
-      '@aui/core': '${framework === 'react' ? '@aui/react' : '@aui/vue'}',
+      '@yaomingshan/core': '${framework === 'react' ? '@yaomingshan/react' : '@yaomingshan/vue'}',
     },
   },
 });
 `
     );
-    console.log(pc.green('✓ vite.config.ts'));
+    console.log(pc.green('�?vite.config.ts'));
 
-    console.log(`\n${pc.green('✨')} 项目创建完成！\n`);
+    console.log(`\n${pc.green('�?)} 项目创建完成！\n`);
     console.log(`  ${pc.bold('cd ' + project)}`);
     console.log(`  ${pc.bold('pnpm install')}`);
     console.log(`  ${pc.bold('pnpm dev')}\n`);
     console.log(`查看 AI 宪法: ${pc.cyan(project + '/.cursorrules')}`);
-    console.log(`组件速查表: ${pc.cyan(project + '/AUI-COMPONENT-REF.md')}\n`);
+    console.log(`组件速查�? ${pc.cyan(project + '/AUI-COMPONENT-REF.md')}\n`);
   });
 
 program.parse();

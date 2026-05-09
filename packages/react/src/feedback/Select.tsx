@@ -1,10 +1,8 @@
 /**
- * Select 选择器
- *
- * @fileoverview 下拉选择器，支持单选/多选、搜索
- *
+ * Select 选择�? *
+ * @fileoverview 下拉选择器，支持单�?多选、搜�? *
  * @example React
- * import { Select } from '@aui/react';
+ * import { Select } from '@yaomingshan/react';
  * const options = [{ label: '北京', value: 'beijing' }, { label: '上海', value: 'shanghai' }];
  * <Select options={options} placeholder="请选择城市" />
  *
@@ -13,7 +11,7 @@
  */
 
 import React, { useState, useRef, useEffect, useMemo } from 'react';
-import { type SelectProps, type SelectOption, cx } from '@aui/core';
+import { type SelectProps, type SelectOption, cx } from '@yaomingshan/core';
 
 export const Select = React.forwardRef<HTMLDivElement, SelectProps>(
   (
@@ -102,7 +100,7 @@ export const Select = React.forwardRef<HTMLDivElement, SelectProps>(
 
     const displayText = multiple
       ? selectedLabels.length > 0
-        ? `已选 ${selectedLabels.length} 项`
+        ? `已�?${selectedLabels.length} 项`
         : placeholder
       : selectedLabels || placeholder;
 

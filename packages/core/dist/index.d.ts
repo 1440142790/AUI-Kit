@@ -1,20 +1,18 @@
 /**
  * AUI Kit 设计令牌 - 颜色系统
  *
- * 所有组件必须使用以下颜色，禁止硬编码颜色值。
- * AI 生成代码时必须引用此处的令牌变量。
- *
+ * 所有组件必须使用以下颜色，禁止硬编码颜色值�? * AI 生成代码时必须引用此处的令牌变量�? *
  * @example
  * // React
- * import { colors } from '@aui/core';
+ * import { colors } from '@yaomingshan/core';
  * <div className={colors.primary.DEFAULT}>主色文字</div>
  *
  * // Vue
- * import { colors } from '@aui/core';
+ * import { colors } from '@yaomingshan/core';
  * <div :class="colors.primary.DEFAULT">主色文字</div>
  */
 declare const colors: {
-    /** 主色 - 用于主要按钮、链接、强调 */
+    /** 主色 - 用于主要按钮、链接、强�?*/
     readonly primary: {
         readonly DEFAULT: "bg-[#1677ff] text-white";
         readonly light: "bg-[#69b1ff] text-white";
@@ -23,7 +21,7 @@ declare const colors: {
         readonly border: "border-[#1677ff]";
         readonly hover: "hover:bg-[#4096ff]";
     };
-    /** 成功色 - 用于成功状态、通过状态 */
+    /** 成功�?- 用于成功状态、通过状�?*/
     readonly success: {
         readonly DEFAULT: "bg-[#52c41a] text-white";
         readonly light: "bg-[#95de64] text-[#389e0d]";
@@ -32,7 +30,7 @@ declare const colors: {
         readonly border: "border-[#52c41a]";
         readonly bg: "bg-[#f6ffed]";
     };
-    /** 警告色 - 用于警告状态、待处理 */
+    /** 警告�?- 用于警告状态、待处理 */
     readonly warning: {
         readonly DEFAULT: "bg-[#faad14] text-white";
         readonly light: "bg-[#ffd666] text-[#d48806]";
@@ -41,7 +39,7 @@ declare const colors: {
         readonly border: "border-[#faad14]";
         readonly bg: "bg-[#fffbe6]";
     };
-    /** 危险色 - 用于错误、删除、危险操作 */
+    /** 危险�?- 用于错误、删除、危险操�?*/
     readonly danger: {
         readonly DEFAULT: "bg-[#ff4d4f] text-white";
         readonly light: "bg-[#ff7875] text-[#d9363e]";
@@ -50,7 +48,7 @@ declare const colors: {
         readonly border: "border-[#ff4d4f]";
         readonly bg: "bg-[#fff2f0]";
     };
-    /** 信息色 - 用于信息提示 */
+    /** 信息�?- 用于信息提示 */
     readonly info: {
         readonly DEFAULT: "bg-[#1677ff] text-white";
         readonly light: "bg-[#69b1ff] text-white";
@@ -59,7 +57,7 @@ declare const colors: {
         readonly border: "border-[#1677ff]";
         readonly bg: "bg-[#e6f4ff]";
     };
-    /** 中性色 - 用于正文、辅助、边框 */
+    /** 中性色 - 用于正文、辅助、边�?*/
     readonly gray: {
         readonly 50: "bg-[#fafafa] text-[#595959]";
         readonly 100: "bg-[#f5f5f5] text-[#595959]";
@@ -84,7 +82,7 @@ declare const colors: {
         readonly disabled: "text-[#bfbfbf]";
         readonly inverse: "text-[#ffffff]";
     };
-    /** 背景色 */
+    /** 背景�?*/
     readonly bg: {
         readonly layout: "bg-[#ffffff]";
         readonly container: "bg-[#fafafa]";
@@ -105,15 +103,14 @@ type ColorKey = keyof typeof colors;
 type ColorShade = 'DEFAULT' | 'light' | 'dark' | 'text' | 'border' | 'bg' | 'hover';
 
 /**
- * AUI Kit 设计令牌 - 尺寸与间距系统
- *
+ * AUI Kit 设计令牌 - 尺寸与间距系�? *
  * @example
  * // React
- * import { spacing, radius } from '@aui/core';
+ * import { spacing, radius } from '@yaomingshan/core';
  * <div style={{ padding: spacing.md, borderRadius: radius.md }}>内容</div>
  *
  * // Vue
- * import { spacing, radius } from '@aui/core';
+ * import { spacing, radius } from '@yaomingshan/core';
  * <div :style="{ padding: spacing.md, borderRadius: radius.md }">内容</div>
  */
 /** 间距尺寸 */
@@ -126,7 +123,7 @@ declare const spacing: {
     readonly '2xl': "40px";
     readonly '3xl': "48px";
 };
-/** 间距枚举值（用于 Props） */
+/** 间距枚举值（用于 Props�?*/
 declare const spacingKeys: readonly ["xs", "sm", "md", "lg", "xl", "2xl", "3xl"];
 type SpacingKey = typeof spacingKeys[number];
 /** 圆角尺寸 */
@@ -139,7 +136,7 @@ declare const radius: {
     readonly '2xl': "16px";
     readonly full: "9999px";
 };
-/** 圆角枚举值 */
+/** 圆角枚举�?*/
 declare const radiusKeys: readonly ["none", "sm", "md", "lg", "xl", "2xl", "full"];
 type RadiusKey = typeof radiusKeys[number];
 /** 字号 */
@@ -233,23 +230,20 @@ declare const borderWidth: {
 };
 
 /**
- * AUI Kit - 所有组件 Props 类型定义
+ * AUI Kit - 所有组�?Props 类型定义
  *
- * 统一接口原则：
- * - 所有 Props 类型以组件名命名（如 ButtonProps, GridProps）
- * - 跨组件复用类型提取到公共类型（如 BaseComponentProps）
- * - React 和 Vue 使用完全相同的 Props 接口
+ * 统一接口原则�? * - 所�?Props 类型以组件名命名（如 ButtonProps, GridProps�? * - 跨组件复用类型提取到公共类型（如 BaseComponentProps�? * - React �?Vue 使用完全相同�?Props 接口
  *
  * @example
  * // React
- * import type { ButtonProps } from '@aui/core';
+ * import type { ButtonProps } from '@yaomingshan/core';
  * const MyButton: ButtonProps = { type: 'primary', children: '提交' };
  *
  * // Vue
- * import type { ButtonProps } from '@aui/core';
+ * import type { ButtonProps } from '@yaomingshan/core';
  * const props: ButtonProps = { type: 'primary' };
  */
-/** 框架无关的 ReactNode 类型（兼容 ReactNode 和 Vue slot） */
+/** 框架无关�?ReactNode 类型（兼�?ReactNode �?Vue slot�?*/
 type ReactNode = string | number | boolean | null | undefined | void | {
     render?: () => ReactNode;
 } | ReactNode[];
@@ -271,18 +265,18 @@ type Direction = 'horizontal' | 'vertical';
 type Placement = 'top' | 'bottom' | 'left' | 'right' | 'topLeft' | 'topRight' | 'bottomLeft' | 'bottomRight';
 /** 所有组件的基础 Props */
 interface BaseComponentProps {
-    /** 自定义类名 */
+    /** 自定义类�?*/
     className?: string;
-    /** 自定义样式 */
+    /** 自定义样�?*/
     style?: Record<string, string | number>;
     /** 组件 ID */
     id?: string;
-    /** 平台类型（自动检测或手动指定） */
+    /** 平台类型（自动检测或手动指定�?*/
     platform?: Platform$1;
-    /** 禁用状态 */
+    /** 禁用状�?*/
     disabled?: boolean;
 }
-/** 带 children 的组件 Props */
+/** �?children 的组�?Props */
 interface BaseComponentWithChildrenProps extends BaseComponentProps {
     children?: ReactNode;
 }
@@ -290,18 +284,18 @@ interface BaseComponentWithChildrenProps extends BaseComponentProps {
 interface PageProps extends BaseComponentWithChildrenProps {
     /** 页面标题 */
     title?: string;
-    /** 是否显示导航栏 */
+    /** 是否显示导航�?*/
     showNav?: boolean;
     /** 返回按钮回调 */
     onBack?: () => void;
-    /** 页面背景色 */
+    /** 页面背景�?*/
     background?: 'white' | 'gray' | 'transparent';
-    /** 页面是否可滚动 */
+    /** 页面是否可滚�?*/
     scrollable?: boolean;
 }
 /** Grid 栅格布局 */
 interface GridProps extends BaseComponentWithChildrenProps {
-    /** 列数（1-24） */
+    /** 列数�?-24�?*/
     cols?: number | {
         xs?: number;
         sm?: number;
@@ -338,7 +332,7 @@ interface SpacerProps extends BaseComponentProps {
     /** 方向 */
     direction?: 'horizontal' | 'vertical';
 }
-/** Tabs 标签页 */
+/** Tabs 标签�?*/
 interface TabsProps extends BaseComponentWithChildrenProps {
     /** 选项列表 */
     items: TabItem[];
@@ -386,9 +380,9 @@ interface MenuProps extends BaseComponentWithChildrenProps {
     items: MenuItem[];
     /** 菜单模式 */
     mode?: 'horizontal' | 'vertical' | 'inline';
-    /** 是否折叠（inline 模式） */
+    /** 是否折叠（inline 模式�?*/
     collapsed?: boolean;
-    /** 当前选中的 key */
+    /** 当前选中�?key */
     activeKey?: string;
     /** 切换回调 */
     onChange?: (key: string) => void;
@@ -402,27 +396,27 @@ interface MenuItem {
 }
 /** Table 表格 */
 interface TableProps extends BaseComponentWithChildrenProps {
-    /** 列配置 */
+    /** 列配�?*/
     columns: TableColumn[];
-    /** 数据源 */
+    /** 数据�?*/
     dataSource: Record<string, unknown>[];
     /** 分页配置 */
     pagination?: TablePagination | false;
-    /** 行点击回调 */
+    /** 行点击回�?*/
     onRow?: (record: Record<string, unknown>, index: number) => {
         onClick?: () => void;
     };
-    /** 是否带边框 */
+    /** 是否带边�?*/
     bordered?: boolean;
     /** 是否带斑马纹 */
     striped?: boolean;
     /** 是否紧凑模式 */
     size?: 'sm' | 'md' | 'lg';
-    /** 加载状态 */
+    /** 加载状�?*/
     loading?: boolean;
-    /** 空数据描述 */
+    /** 空数据描�?*/
     emptyText?: ReactNode;
-    /** 行类名 */
+    /** 行类�?*/
     rowClassName?: string | ((record: Record<string, unknown>, index: number) => string);
 }
 interface TableColumn {
@@ -444,9 +438,9 @@ interface TablePagination {
     showQuickJumper?: boolean;
     pageSizeOptions?: string[];
 }
-/** CardList 卡片列表（Table 的移动端替代） */
+/** CardList 卡片列表（Table 的移动端替代�?*/
 interface CardListProps extends BaseComponentWithChildrenProps {
-    /** 数据源 */
+    /** 数据�?*/
     dataSource: Record<string, unknown>[];
     /** 渲染每个卡片 */
     renderItem: (item: Record<string, unknown>, index: number) => ReactNode;
@@ -454,18 +448,18 @@ interface CardListProps extends BaseComponentWithChildrenProps {
     columns?: number;
     /** 间距 */
     gap?: Spacing;
-    /** 加载状态 */
+    /** 加载状�?*/
     loading?: boolean;
-    /** 空数据描述 */
+    /** 空数据描�?*/
     emptyText?: ReactNode;
 }
 /** Descriptions 描述列表 */
 interface DescriptionsProps extends BaseComponentWithChildrenProps {
-    /** 描述项 */
+    /** 描述�?*/
     items: DescriptionsItem[];
     /** 列数 */
     column?: number;
-    /** 是否带边框 */
+    /** 是否带边�?*/
     bordered?: boolean;
     /** 标签宽度 */
     labelWidth?: number | string;
@@ -480,7 +474,7 @@ interface DescriptionsItem {
 interface TagProps extends BaseComponentProps {
     /** 标签颜色 */
     color?: ColorType | string;
-    /** 是否可关闭 */
+    /** 是否可关�?*/
     closable?: boolean;
     /** 关闭回调 */
     onClose?: (e: MouseEvent) => void;
@@ -491,11 +485,11 @@ interface TagProps extends BaseComponentProps {
 interface BadgeProps extends BaseComponentWithChildrenProps {
     /** 徽标数量 */
     count?: number;
-    /** 是否显示小圆点 */
+    /** 是否显示小圆�?*/
     dot?: boolean;
-    /** 最大数字 */
+    /** 最大数�?*/
     overflowCount?: number;
-    /** 徽标状态 */
+    /** 徽标状�?*/
     status?: 'success' | 'warning' | 'error' | 'default' | 'processing';
     /** 徽标文字 */
     text?: string;
@@ -508,39 +502,39 @@ interface AvatarProps extends BaseComponentProps {
     size?: Size | number;
     /** 头像形状 */
     shape?: 'circle' | 'square';
-    /** 头像文字（图片加载失败时显示） */
+    /** 头像文字（图片加载失败时显示�?*/
     text?: string;
     /** 头像颜色 */
     color?: ColorType | string;
 }
-/** Progress 进度条 */
+/** Progress 进度�?*/
 interface ProgressProps extends BaseComponentProps {
-    /** 进度百分比 */
+    /** 进度百分�?*/
     percent?: number;
-    /** 进度状态 */
+    /** 进度状�?*/
     status?: 'normal' | 'active' | 'success' | 'error';
-    /** 进度条类型 */
+    /** 进度条类�?*/
     type?: 'line' | 'circle' | 'dashboard';
-    /** 是否显示进度数值 */
+    /** 是否显示进度数�?*/
     showText?: boolean;
-    /** 进度条宽度 */
+    /** 进度条宽�?*/
     strokeWidth?: number;
-    /** 进度条颜色 */
+    /** 进度条颜�?*/
     strokeColor?: string;
-    /** 圆形进度条尺寸 */
+    /** 圆形进度条尺�?*/
     size?: Size | number;
 }
-/** Statistic 统计数值 */
+/** Statistic 统计数�?*/
 interface StatisticProps extends BaseComponentProps {
     /** 标题 */
     title?: ReactNode;
-    /** 数值 */
+    /** 数�?*/
     value?: number | string;
     /** 前缀 */
     prefix?: ReactNode;
     /** 后缀 */
     suffix?: ReactNode;
-    /** 数值样式 */
+    /** 数值样�?*/
     valueStyle?: Record<string, string | number>;
     /** 小数位数 */
     precision?: number;
@@ -549,7 +543,7 @@ interface StatisticProps extends BaseComponentProps {
 }
 /** Form 表单 */
 interface FormProps extends BaseComponentWithChildrenProps {
-    /** 表单初始值 */
+    /** 表单初始�?*/
     initialValues?: Record<string, unknown>;
     /** 表单提交回调 */
     onFinish?: (values: Record<string, unknown>) => void;
@@ -566,9 +560,9 @@ interface FormProps extends BaseComponentWithChildrenProps {
     /** 是否显示必填星号 */
     requiredMark?: boolean;
 }
-/** Form.Item 表单项 */
+/** Form.Item 表单�?*/
 interface FormItemProps extends BaseComponentWithChildrenProps {
-    /** 字段名 */
+    /** 字段�?*/
     name?: string;
     /** 标签 */
     label?: ReactNode;
@@ -594,15 +588,15 @@ interface FormRule {
     pattern?: RegExp;
     validator?: (value: unknown) => boolean | string;
 }
-/** Input 输入框 */
+/** Input 输入�?*/
 interface InputProps extends BaseComponentProps {
-    /** 输入框类型 */
+    /** 输入框类�?*/
     type?: 'text' | 'password' | 'email' | 'number' | 'tel' | 'url' | 'search';
     /** 占位文本 */
     placeholder?: string;
-    /** 输入框值 */
+    /** 输入框�?*/
     value?: string;
-    /** 默认值 */
+    /** 默认�?*/
     defaultValue?: string;
     /** 输入变化回调 */
     onChange?: (value: string) => void;
@@ -610,58 +604,58 @@ interface InputProps extends BaseComponentProps {
     prefix?: ReactNode;
     /** 后缀图标 */
     suffix?: ReactNode;
-    /** 是否可清除 */
+    /** 是否可清�?*/
     allowClear?: boolean;
-    /** 最大长度 */
+    /** 最大长�?*/
     maxLength?: number;
     /** 是否显示字数统计 */
     showCount?: boolean;
     /** 是否只读 */
     readOnly?: boolean;
 }
-/** TextArea 文本域 */
+/** TextArea 文本�?*/
 interface TextAreaProps extends BaseComponentProps {
     /** 行数 */
     rows?: number;
-    /** 最大长度 */
+    /** 最大长�?*/
     maxLength?: number;
     /** 是否显示字数统计 */
     showCount?: boolean;
     /** 占位文本 */
     placeholder?: string;
-    /** 值 */
+    /** �?*/
     value?: string;
-    /** 默认值 */
+    /** 默认�?*/
     defaultValue?: string;
     /** 变化回调 */
     onChange?: (value: string) => void;
-    /** 是否可自动调整高度 */
+    /** 是否可自动调整高�?*/
     autoSize?: boolean | {
         minRows?: number;
         maxRows?: number;
     };
 }
-/** Select 选择器 */
+/** Select 选择�?*/
 interface SelectProps extends BaseComponentProps {
     /** 选项列表 */
     options: SelectOption[];
-    /** 当前值 */
+    /** 当前�?*/
     value?: string | string[];
-    /** 默认值 */
+    /** 默认�?*/
     defaultValue?: string | string[];
     /** 占位文本 */
     placeholder?: string;
-    /** 是否多选 */
+    /** 是否多�?*/
     multiple?: boolean;
-    /** 是否可搜索 */
+    /** 是否可搜�?*/
     searchable?: boolean;
     /** 是否禁用 */
     disabled?: boolean;
     /** 变化回调 */
     onChange?: (value: string | string[]) => void;
-    /** 是否可清除 */
+    /** 是否可清�?*/
     allowClear?: boolean;
-    /** 下拉菜单最大高度 */
+    /** 下拉菜单最大高�?*/
     maxHeight?: number;
 }
 interface SelectOption {
@@ -670,15 +664,15 @@ interface SelectOption {
     disabled?: boolean;
     children?: SelectOption[];
 }
-/** DatePicker 日期选择器 */
+/** DatePicker 日期选择�?*/
 interface DatePickerProps extends BaseComponentProps {
     /** 日期格式 */
     format?: string;
     /** 选择模式 */
     mode?: 'date' | 'week' | 'month' | 'quarter' | 'year';
-    /** 当前值 */
+    /** 当前�?*/
     value?: string;
-    /** 默认值 */
+    /** 默认�?*/
     defaultValue?: string;
     /** 占位文本 */
     placeholder?: string;
@@ -686,16 +680,16 @@ interface DatePickerProps extends BaseComponentProps {
     disabled?: boolean;
     /** 变化回调 */
     onChange?: (value: string, date: Date) => void;
-    /** 可选的最大日期 */
+    /** 可选的最大日�?*/
     maxDate?: Date;
-    /** 可选的最小日期 */
+    /** 可选的最小日�?*/
     minDate?: Date;
 }
 /** Upload 上传 */
 interface UploadProps extends BaseComponentProps {
     /** 上传地址 */
     action?: string;
-    /** 接受的文件类型 */
+    /** 接受的文件类�?*/
     accept?: string;
     /** 文件列表类型 */
     listType?: 'text' | 'picture' | 'picture-card';
@@ -705,13 +699,13 @@ interface UploadProps extends BaseComponentProps {
     fileList?: UploadFile[];
     /** 默认文件列表 */
     defaultFileList?: UploadFile[];
-    /** 是否多选 */
+    /** 是否多�?*/
     multiple?: boolean;
-    /** 是否可拖拽上传 */
+    /** 是否可拖拽上�?*/
     draggable?: boolean;
     /** 上传变化回调 */
     onChange?: (fileList: UploadFile[]) => void;
-    /** 上传前回调 */
+    /** 上传前回�?*/
     beforeUpload?: (file: File) => boolean | Promise<void>;
 }
 interface UploadFile {
@@ -723,7 +717,7 @@ interface UploadFile {
     response?: unknown;
     error?: string;
 }
-/** Switch 开关 */
+/** Switch 开�?*/
 interface SwitchProps extends BaseComponentProps {
     /** 是否选中 */
     checked?: boolean;
@@ -731,7 +725,7 @@ interface SwitchProps extends BaseComponentProps {
     defaultChecked?: boolean;
     /** 变化回调 */
     onChange?: (checked: boolean) => void;
-    /** 加载状态 */
+    /** 加载状�?*/
     loading?: boolean;
     /** 选中时的内容 */
     checkedChildren?: ReactNode;
@@ -744,9 +738,9 @@ interface SwitchProps extends BaseComponentProps {
 interface RadioProps extends BaseComponentProps {
     /** 选项列表 */
     options: RadioOption[];
-    /** 当前值 */
+    /** 当前�?*/
     value?: string;
-    /** 默认值 */
+    /** 默认�?*/
     defaultValue?: string;
     /** 排列方向 */
     direction?: 'horizontal' | 'vertical';
@@ -764,11 +758,11 @@ interface RadioOption {
 interface CheckboxProps extends BaseComponentProps {
     /** 选项列表 */
     options: CheckboxOption[];
-    /** 当前值 */
+    /** 当前�?*/
     value?: string[];
-    /** 默认值 */
+    /** 默认�?*/
     defaultValue?: string[];
-    /** 是否全选 */
+    /** 是否全�?*/
     checkAll?: boolean;
     /** 排列方向 */
     direction?: 'horizontal' | 'vertical';
@@ -786,9 +780,9 @@ interface CheckboxOption {
 interface RateProps extends BaseComponentProps {
     /** 星数 */
     count?: number;
-    /** 当前值 */
+    /** 当前�?*/
     value?: number;
-    /** 默认值 */
+    /** 默认�?*/
     defaultValue?: number;
     /** 是否允许半星 */
     allowHalf?: boolean;
@@ -796,7 +790,7 @@ interface RateProps extends BaseComponentProps {
     readOnly?: boolean;
     /** 变化回调 */
     onChange?: (value: number) => void;
-    /** 自定义字符 */
+    /** 自定义字�?*/
     character?: ReactNode;
 }
 /** Button 按钮 */
@@ -805,9 +799,9 @@ interface ButtonProps extends BaseComponentProps {
     type?: 'primary' | 'default' | 'dashed' | 'text' | 'link';
     /** 按钮尺寸 */
     size?: Size;
-    /** 加载状态 */
+    /** 加载状�?*/
     loading?: boolean;
-    /** 是否为块级按钮 */
+    /** 是否为块级按�?*/
     block?: boolean;
     /** 危险按钮 */
     danger?: boolean;
@@ -820,7 +814,7 @@ interface ButtonProps extends BaseComponentProps {
     /** HTML 类型 */
     htmlType?: 'button' | 'submit' | 'reset';
 }
-/** Modal 对话框 */
+/** Modal 对话�?*/
 interface ModalProps extends BaseComponentWithChildrenProps {
     /** 是否显示 */
     visible?: boolean;
@@ -846,27 +840,27 @@ interface ModalProps extends BaseComponentWithChildrenProps {
     mask?: boolean;
     /** 点击遮罩是否关闭 */
     maskClosable?: boolean;
-    /** 是否可关闭 */
+    /** 是否可关�?*/
     closable?: boolean;
-    /** 加载状态 */
+    /** 加载状�?*/
     confirmLoading?: boolean;
     /** 弹窗内容区域样式 */
     bodyStyle?: Record<string, string | number>;
 }
-/** Toast 轻提示 */
+/** Toast 轻提�?*/
 interface ToastOptions {
     /** 内容 */
     content: ReactNode;
     /** 类型 */
     type?: 'success' | 'error' | 'warning' | 'info' | 'loading';
-    /** 持续时间（毫秒），0 表示不自动关闭 */
+    /** 持续时间（毫秒）�? 表示不自动关�?*/
     duration?: number;
     /** 是否显示遮罩 */
     mask?: boolean;
     /** 关闭回调 */
     onClose?: () => void;
 }
-/** Popconfirm 气泡确认框 */
+/** Popconfirm 气泡确认�?*/
 interface PopconfirmProps extends BaseComponentWithChildrenProps {
     /** 确认标题 */
     title?: ReactNode;
@@ -887,7 +881,7 @@ interface PopconfirmProps extends BaseComponentWithChildrenProps {
     /** 位置 */
     placement?: Placement;
 }
-/** Empty 空状态 */
+/** Empty 空状�?*/
 interface EmptyProps extends BaseComponentProps {
     /** 描述文本 */
     description?: ReactNode;
@@ -896,32 +890,32 @@ interface EmptyProps extends BaseComponentProps {
     /** 图片尺寸 */
     imageSize?: number;
 }
-/** Skeleton 骨架屏 */
+/** Skeleton 骨架�?*/
 interface SkeletonProps extends BaseComponentWithChildrenProps {
-    /** 加载状态 */
+    /** 加载状�?*/
     loading?: boolean;
-    /** 骨架屏类型 */
+    /** 骨架屏类�?*/
     type?: 'text' | 'rect' | 'circle' | 'card' | 'list';
     /** 行数 */
     rows?: number;
     /** 是否显示动画 */
     animated?: boolean;
-    /** 自定义宽度 */
+    /** 自定义宽�?*/
     width?: number | string;
-    /** 自定义高度 */
+    /** 自定义高�?*/
     height?: number | string;
 }
-/** Spin 加载中 */
+/** Spin 加载�?*/
 interface SpinProps extends BaseComponentWithChildrenProps {
-    /** 加载状态 */
+    /** 加载状�?*/
     spinning?: boolean;
     /** 提示文字 */
     tip?: string;
-    /** 加载指示器大小 */
+    /** 加载指示器大�?*/
     size?: Size;
     /** 是否全屏加载 */
     fullscreen?: boolean;
-    /** 自定义加载图标 */
+    /** 自定义加载图�?*/
     indicator?: ReactNode;
 }
 /** BottomSheet 底部抽屉 */
@@ -936,7 +930,7 @@ interface BottomSheetProps extends BaseComponentWithChildrenProps {
     onClose?: () => void;
     /** 标题 */
     title?: ReactNode;
-    /** 是否可拖拽关闭 */
+    /** 是否可拖拽关�?*/
     draggable?: boolean;
 }
 interface BottomSheetAction {
@@ -951,11 +945,11 @@ interface BottomSheetAction {
 interface SwiperProps extends BaseComponentWithChildrenProps {
     /** 是否自动播放 */
     autoplay?: boolean;
-    /** 是否显示指示点 */
+    /** 是否显示指示�?*/
     dots?: boolean;
     /** 是否循环播放 */
     loop?: boolean;
-    /** 指示点位置 */
+    /** 指示点位�?*/
     dotsPosition?: 'left' | 'center' | 'right';
     /** 自动播放间隔（毫秒） */
     interval?: number;
@@ -993,7 +987,7 @@ interface IndexBarProps extends BaseComponentProps {
 interface IndexBarItem {
     /** 索引字母 */
     index: string;
-    /** 该索引下的数据 */
+    /** 该索引下的数�?*/
     items: {
         key: string;
         title: string;
@@ -1006,43 +1000,38 @@ interface IndexBarItem {
  * AUI Kit - 平台检测与适配
  *
  * @example
- * import { detectPlatform, isMobile, PlatformContext } from '@aui/core';
+ * import { detectPlatform, isMobile, PlatformContext } from '@yaomingshan/core';
  *
- * // 检测当前平台
- * const platform = detectPlatform();
+ * // 检测当前平�? * const platform = detectPlatform();
  * if (isMobile()) { ... }
  */
 type Platform = 'web' | 'mobile' | 'mini';
-/** 通用小程序环境 */
+/** 通用小程序环�?*/
 declare const isMini: boolean;
-/** 移动端检测 */
+/** 移动端检�?*/
 declare const isMobileEnv: boolean;
 /**
- * 检测当前平台
- */
+ * 检测当前平�? */
 declare function detectPlatform(override?: Platform): Platform;
 /**
  * 快捷判断：是否为移动端（不含小程序）
  */
 declare function isMobile(): boolean;
 /**
- * 快捷判断：是否为 Web 端
- */
+ * 快捷判断：是否为 Web �? */
 declare function isWeb(): boolean;
 /**
- * 快捷判断：是否为小程序
- */
+ * 快捷判断：是否为小程�? */
 declare function isMiniProgram(): boolean;
 /**
- * 根据平台返回不同的值
- */
+ * 根据平台返回不同的�? */
 declare function platformMatch<T>(matchers: {
     web?: T;
     mobile?: T;
     mini?: T;
 }, fallback: T): T;
 /**
- * 生成平台特定的 className
+ * 生成平台特定�?className
  */
 declare function platformClass(platform: Platform, classes: Record<Platform, string>): string;
 /**
@@ -1050,23 +1039,20 @@ declare function platformClass(platform: Platform, classes: Record<Platform, str
  */
 declare const mobileComponentMap: Record<string, string>;
 /**
- * 检查某组件在当前平台是否需要替换
- */
+ * 检查某组件在当前平台是否需要替�? */
 declare function shouldReplaceComponent(componentName: string, platform: Platform): string;
 
 /**
  * AUI Kit - 工具函数
  */
 /**
- * 合并 className（支持多参数）
- * @example
+ * 合并 className（支持多参数�? * @example
  * cx('text-sm', 'px-4', isActive && 'bg-blue-500')
  */
 declare function cx(...classes: (string | boolean | undefined | null)[]): string;
 declare function generateId(prefix?: string): string;
 /**
- * 对象转 className 字符串
- * @example
+ * 对象�?className 字符�? * @example
  * cx({ 'text-sm': true, 'px-4': false }) // 'text-sm'
  */
 declare function cxObject(obj: Record<string, boolean | undefined>): string;
@@ -1075,12 +1061,10 @@ declare function cxObject(obj: Record<string, boolean | undefined>): string;
  */
 declare function merge<T extends Record<string, unknown>>(target: T, ...sources: Partial<T>[]): T;
 /**
- * 判断值是否为空（null, undefined, ''）
- */
+ * 判断值是否为空（null, undefined, ''�? */
 declare function isEmpty(value: unknown): boolean;
 /**
- * 限制数值在范围内
- */
+ * 限制数值在范围�? */
 declare function clamp(value: number, min: number, max: number): number;
 /**
  * 防抖函数
@@ -1091,16 +1075,15 @@ declare function debounce<T extends (...args: unknown[]) => void>(fn: T, delay: 
  */
 declare function throttle<T extends (...args: unknown[]) => void>(fn: T, delay: number): T;
 /**
- * 将 camelCase 转为 kebab-case
+ * �?camelCase 转为 kebab-case
  */
 declare function kebabCase(str: string): string;
 /**
- * 将 kebab-case 转为 camelCase
+ * �?kebab-case 转为 camelCase
  */
 declare function camelCase(str: string): string;
 /**
- * 首字母大写
- */
+ * 首字母大�? */
 declare function capitalize(str: string): string;
 
 export { type AvatarProps, type BadgeProps, type BaseComponentProps, type BaseComponentWithChildrenProps, type BottomSheetAction, type BottomSheetProps, type ButtonProps, type CardListProps, type CheckboxOption, type CheckboxProps, type ColorKey, type ColorShade, type ColorType, type DatePickerProps, type DescriptionsItem, type DescriptionsProps, type Direction, type DrawerProps, type EmptyProps, type FlexProps, type FormItemProps, type FormProps, type FormRule, type GridProps, type IndexBarItem, type IndexBarProps, type InputProps, type MenuItem, type MenuProps, type ModalProps, type PageProps, type Placement, type Platform, type PopconfirmProps, type ProgressProps, type PullRefreshProps, type RadioOption, type RadioProps, type Radius, type RadiusKey, type RateProps, type SelectOption, type SelectProps, type Size, type SizeKey, type SkeletonProps, type SpacerProps, type Spacing, type SpacingKey, type SpinProps, type StatisticProps, type SwiperProps, type SwitchProps, type TabItem, type TableColumn, type TablePagination, type TableProps, type TabsProps, type TagProps, type TextAreaProps, type ToastOptions, type UploadFile, type UploadProps, type Variant, borderWidth, camelCase, capitalize, clamp, colors, componentSizes, cx, cxObject, debounce, detectPlatform, fontSize, fontWeight, generateId, isEmpty, isMini, isMiniProgram, isMobile, isMobileEnv, isWeb, kebabCase, lineHeight, merge, mobileComponentMap, platformClass, platformMatch, radius, radiusKeys, shadows, shouldReplaceComponent, sizeKeys, spacing, spacingKeys, throttle, transitions, zIndex };

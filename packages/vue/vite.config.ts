@@ -5,7 +5,7 @@ import { resolve } from 'path';
 export default defineConfig({
   resolve: {
     alias: {
-      '@aui/core': resolve(__dirname, '../../packages/core/dist'),
+      '@yaomingshan/core': resolve(__dirname, '../../packages/core/dist'),
     },
   },
   plugins: [
@@ -26,7 +26,7 @@ export default defineConfig({
       fileName: 'index',
     },
     rollupOptions: {
-      external: ['vue', '@aui/core'],
+      external: ['vue', '@yaomingshan/core'],
       output: {
         preserveModules: false,
         globals: { vue: 'Vue' },

@@ -1,52 +1,47 @@
-# Input 输入框
-
-单行文本输入框，支持前缀/后缀图标、清除按钮等。
-
+# Input 输入�?
+单行文本输入框，支持前缀/后缀图标、清除按钮等�?
 ## 基本用法
 
 ::: code-group
 
 ```tsx [React]
-import { Input } from '@aui/react';
+import { Input } from '@yaomingshan/react';
 
 <Input placeholder="请输入用户名" />
-<Input placeholder="禁用状态" disabled />
+<Input placeholder="禁用状�? disabled />
 <Input placeholder="只读" readOnly value="不可编辑" />
 ```
 
 ```vue [Vue]
 <Input placeholder="请输入用户名" />
-<Input placeholder="禁用状态" :disabled="true" />
+<Input placeholder="禁用状�? :disabled="true" />
 ```
 
 :::
 
-## 带图标
-
+## 带图�?
 ::: code-group
 
 ```tsx [React]
-import { Input } from '@aui/react';
+import { Input } from '@yaomingshan/react';
 
 // 前缀
 <Input placeholder="请输入用户名" prefix={<UserIcon />} />
 
 // 后缀
-<Input placeholder="请输入金额" suffix="元" />
+<Input placeholder="请输入金�? suffix="�? />
 
-// 搜索框
-<Input type="search" placeholder="搜索..." />
+// 搜索�?<Input type="search" placeholder="搜索..." />
 ```
 
 ```vue [Vue]
 <Input placeholder="请输入用户名" prefix="👤" />
-<Input placeholder="请输入金额" suffix="元" />
+<Input placeholder="请输入金�? suffix="�? />
 ```
 
 :::
 
-## 可清除
-
+## 可清�?
 ```tsx
 <Input
   placeholder="可清除的输入"
@@ -59,7 +54,7 @@ import { Input } from '@aui/react';
 
 ```tsx
 <Input
-  placeholder="最多50字"
+  placeholder="最�?0�?
   maxLength={50}
   showCount
 />
@@ -68,7 +63,7 @@ import { Input } from '@aui/react';
 ## 密码输入
 
 ```tsx
-<Input type="password" placeholder="请输入密码" />
+<Input type="password" placeholder="请输入密�? />
 ```
 
 ## 受控模式
@@ -76,7 +71,7 @@ import { Input } from '@aui/react';
 ::: code-group
 
 ```tsx [React]
-import { Input } from '@aui/react';
+import { Input } from '@yaomingshan/react';
 const [value, setValue] = useState('');
 
 <Input
@@ -100,16 +95,16 @@ const value = ref('');
 
 ## Props
 
-| 参数 | 说明 | 类型 | 默认值 |
+| 参数 | 说明 | 类型 | 默认�?|
 |------|------|------|--------|
-| `type` | 输入框类型 | `'text' \| 'password' \| 'email' \| 'number' \| 'tel' \| 'url' \| 'search'` | `'text'` |
+| `type` | 输入框类�?| `'text' \| 'password' \| 'email' \| 'number' \| 'tel' \| 'url' \| 'search'` | `'text'` |
 | `placeholder` | 占位文本 | `string` | `-` |
-| `value` | 输入值（受控） | `string` | `-` |
+| `value` | 输入值（受控�?| `string` | `-` |
 | `defaultValue` | 默认值（非受控） | `string` | `-` |
 | `prefix` | 前缀图标/文字 | `ReactNode` | `-` |
 | `suffix` | 后缀图标/文字 | `ReactNode` | `-` |
-| `allowClear` | 是否可清除 | `boolean` | `false` |
-| `maxLength` | 最大长度 | `number` | `-` |
+| `allowClear` | 是否可清�?| `boolean` | `false` |
+| `maxLength` | 最大长�?| `number` | `-` |
 | `showCount` | 是否显示字数统计 | `boolean` | `false` |
 | `readOnly` | 是否只读 | `boolean` | `false` |
 | `disabled` | 是否禁用 | `boolean` | `false` |

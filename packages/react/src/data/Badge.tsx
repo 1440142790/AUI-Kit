@@ -2,7 +2,7 @@
  * Badge 徽标
  *
  * @example React
- * import { Badge } from '@aui/react';
+ * import { Badge } from '@yaomingshan/react';
  * <Badge count={5}><Icon /></Badge>
  * <Badge dot status="success" />
  *
@@ -11,7 +11,7 @@
  */
 
 import React, { useMemo } from 'react';
-import { type BadgeProps, cx } from '@aui/core';
+import { type BadgeProps, cx } from '@yaomingshan/core';
 
 const statusColor = {
   success: 'bg-[#52c41a]',

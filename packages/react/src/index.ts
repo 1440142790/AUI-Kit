@@ -2,8 +2,8 @@
  * AUI Kit - React 组件库统一导出
  *
  * @example
- * import { Button, Input, Select, Table, Modal } from '@aui/react';
- * import '@aui/react/dist/style.css'; // 可选：基础样式
+ * import { Button, Input, Select, Table, Modal } from '@yaomingshan/react';
+ * import '@yaomingshan/react/dist/style.css'; // 可选：基础样式
  */
 
 // ============================================================
@@ -55,8 +55,7 @@ export { Skeleton } from './feedback/Skeleton';
 export { Spin } from './feedback/Spin';
 
 // ============================================================
-// 移动端增强组件
-// ============================================================
+// 移动端增强组�?// ============================================================
 export { BottomSheet } from './mobile/BottomSheet';
 export { Swiper } from './mobile/Swiper';
 export { PullRefresh } from './mobile/PullRefresh';

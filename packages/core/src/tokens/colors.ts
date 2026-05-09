@@ -1,20 +1,18 @@
 /**
  * AUI Kit 设计令牌 - 颜色系统
  *
- * 所有组件必须使用以下颜色，禁止硬编码颜色值。
- * AI 生成代码时必须引用此处的令牌变量。
- *
+ * 所有组件必须使用以下颜色，禁止硬编码颜色值�? * AI 生成代码时必须引用此处的令牌变量�? *
  * @example
  * // React
- * import { colors } from '@aui/core';
+ * import { colors } from '@yaomingshan/core';
  * <div className={colors.primary.DEFAULT}>主色文字</div>
  *
  * // Vue
- * import { colors } from '@aui/core';
+ * import { colors } from '@yaomingshan/core';
  * <div :class="colors.primary.DEFAULT">主色文字</div>
  */
 export const colors = {
-  /** 主色 - 用于主要按钮、链接、强调 */
+  /** 主色 - 用于主要按钮、链接、强�?*/
   primary: {
     DEFAULT: 'bg-[#1677ff] text-white',
     light:   'bg-[#69b1ff] text-white',
@@ -24,7 +22,7 @@ export const colors = {
     hover:   'hover:bg-[#4096ff]',
   } as const,
 
-  /** 成功色 - 用于成功状态、通过状态 */
+  /** 成功�?- 用于成功状态、通过状�?*/
   success: {
     DEFAULT: 'bg-[#52c41a] text-white',
     light:   'bg-[#95de64] text-[#389e0d]',
@@ -34,7 +32,7 @@ export const colors = {
     bg:      'bg-[#f6ffed]',
   } as const,
 
-  /** 警告色 - 用于警告状态、待处理 */
+  /** 警告�?- 用于警告状态、待处理 */
   warning: {
     DEFAULT: 'bg-[#faad14] text-white',
     light:   'bg-[#ffd666] text-[#d48806]',
@@ -44,7 +42,7 @@ export const colors = {
     bg:      'bg-[#fffbe6]',
   } as const,
 
-  /** 危险色 - 用于错误、删除、危险操作 */
+  /** 危险�?- 用于错误、删除、危险操�?*/
   danger: {
     DEFAULT: 'bg-[#ff4d4f] text-white',
     light:   'bg-[#ff7875] text-[#d9363e]',
@@ -54,7 +52,7 @@ export const colors = {
     bg:      'bg-[#fff2f0]',
   } as const,
 
-  /** 信息色 - 用于信息提示 */
+  /** 信息�?- 用于信息提示 */
   info: {
     DEFAULT: 'bg-[#1677ff] text-white',
     light:   'bg-[#69b1ff] text-white',
@@ -64,7 +62,7 @@ export const colors = {
     bg:      'bg-[#e6f4ff]',
   } as const,
 
-  /** 中性色 - 用于正文、辅助、边框 */
+  /** 中性色 - 用于正文、辅助、边�?*/
   gray: {
     50:  'bg-[#fafafa] text-[#595959]',
     100: 'bg-[#f5f5f5] text-[#595959]',
@@ -91,7 +89,7 @@ export const colors = {
     inverse:   'text-[#ffffff]',
   } as const,
 
-  /** 背景色 */
+  /** 背景�?*/
   bg: {
     layout:    'bg-[#ffffff]',
     container: 'bg-[#fafafa]',

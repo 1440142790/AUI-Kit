@@ -1,8 +1,7 @@
 /**
- * BottomSheet 底部抽屉（移动端）
- *
+ * BottomSheet 底部抽屉（移动端�? *
  * @example React
- * import { BottomSheet } from '@aui/react';
+ * import { BottomSheet } from '@yaomingshan/react';
  * const actions = [{ key: 'save', text: '保存', onClick: handleSave }];
  * <BottomSheet visible={show} actions={actions} title="操作" onClose={close} />
  *
@@ -11,7 +10,7 @@
  */
 
 import React, { useEffect } from 'react';
-import { type BottomSheetProps, type BottomSheetAction, cx } from '@aui/core';
+import { type BottomSheetProps, type BottomSheetAction, cx } from '@yaomingshan/core';
 import { Button } from '../feedback/Button';
 
 export const BottomSheet = React.forwardRef<HTMLDivElement, BottomSheetProps>(
@@ -32,7 +31,7 @@ export const BottomSheet = React.forwardRef<HTMLDivElement, BottomSheetProps>(
           style={{ height: typeof height === 'number' ? `${height}px` : height }}
           {...rest}
         >
-          {/* 拖拽条 */}
+          {/* 拖拽�?*/}
           {draggable && (
             <div className="flex justify-center pt-3 pb-2 shrink-0">
               <div className="w-10 h-1 rounded-full bg-[#d9d9d9]" />

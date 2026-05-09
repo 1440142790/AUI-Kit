@@ -2,11 +2,10 @@
 /**
  * Button 按钮
  *
- * @fileoverview 按钮组件，Vue 3 实现，与 @aui/react Button Props 完全一致
- *
+ * @fileoverview 按钮组件，Vue 3 实现，与 @yaomingshan/react Button Props 完全一�? *
  * @example Vue
  * <script setup>
- * import { Button } from '@aui/vue';
+ * import { Button } from '@yaomingshan/vue';
  * <Button type="primary" :loading="submitting" @click="handleSubmit">提交</Button>
  *
  * @example React (对照)

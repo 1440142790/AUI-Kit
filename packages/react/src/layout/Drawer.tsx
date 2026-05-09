@@ -2,7 +2,7 @@
  * Drawer 抽屉
  *
  * @example React
- * import { Drawer } from '@aui/react';
+ * import { Drawer } from '@yaomingshan/react';
  * <Drawer visible={open} placement="right" onClose={close} title="设置">
  *   <div>抽屉内容</div>
  * </Drawer>
@@ -14,7 +14,7 @@
  */
 
 import React, { useEffect } from 'react';
-import { type DrawerProps, cx } from '@aui/core';
+import { type DrawerProps, cx } from '@yaomingshan/core';
 
 export const Drawer = React.forwardRef<HTMLDivElement, DrawerProps>(
   ({ visible = false, placement = 'right', size = 378, onClose, showClose = true, title, children, mask = true, maskClosable = true, footer, className }, ref) => {

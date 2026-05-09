@@ -2,7 +2,7 @@
  * Descriptions 描述列表
  *
  * @example React
- * import { Descriptions } from '@aui/react';
+ * import { Descriptions } from '@yaomingshan/react';
  * const items = [
  *   { key: 'name', label: '姓名', value: '张三' },
  *   { key: 'email', label: '邮箱', value: 'zhang@example.com' },
@@ -11,7 +11,7 @@
  */
 
 import React, { useMemo } from 'react';
-import { type DescriptionsProps, cx } from '@aui/core';
+import { type DescriptionsProps, cx } from '@yaomingshan/core';
 
 export const Descriptions = React.forwardRef<HTMLDivElement, DescriptionsProps>(
   ({ items = [], column = 3, bordered = false, labelWidth, className, ...rest }, ref) => {

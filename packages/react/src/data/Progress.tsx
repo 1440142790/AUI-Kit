@@ -1,8 +1,7 @@
 /**
- * Progress 进度条
- *
+ * Progress 进度�? *
  * @example React
- * import { Progress } from '@aui/react';
+ * import { Progress } from '@yaomingshan/react';
  * <Progress percent={80} status="active" />
  * <Progress percent={100} status="success" showText />
  * <Progress type="circle" percent={75} size={120} />
@@ -12,7 +11,7 @@
  */
 
 import React, { useMemo } from 'react';
-import { type ProgressProps, cx } from '@aui/core';
+import { type ProgressProps, cx } from '@yaomingshan/core';
 
 const statusColor = {
   normal: 'bg-[#1677ff]',

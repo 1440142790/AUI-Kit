@@ -1,28 +1,26 @@
-# 快速上手
-
+# 快速上�?
 ## 组件使用示例
 
 ### 布局示例
 
 ```tsx
-import { Page, Grid, Flex, Spacer, Tabs } from '@aui/react';
+import { Page, Grid, Flex, Spacer, Tabs } from '@yaomingshan/react';
 
 // 栅格布局
 <Grid cols={3} gap="md">
-  <div>第一列</div>
-  <div>第二列</div>
-  <div>第三列</div>
+  <div>第一�?/div>
+  <div>第二�?/div>
+  <div>第三�?/div>
 </Grid>
 
 // 弹性布局
 <Flex direction="column" gap="md">
-  <div>上</div>
+  <div>�?/div>
   <Spacer size="lg" />
-  <div>下（留白占位）</div>
+  <div>下（留白占位�?/div>
 </Flex>
 
-// 标签页
-const items = [
+// 标签�?const items = [
   { key: '1', label: 'Tab 1', children: <div>内容1</div> },
   { key: '2', label: 'Tab 2', children: <div>内容2</div> },
 ];
@@ -32,7 +30,7 @@ const items = [
 ### 表单示例
 
 ```tsx
-import { Form, FormItem, Input, Select, Button } from '@aui/react';
+import { Form, FormItem, Input, Select, Button } from '@yaomingshan/react';
 
 const cities = [
   { label: '北京', value: 'beijing' },
@@ -42,7 +40,7 @@ const cities = [
 <Form onFinish={handleSubmit} layout="vertical">
   <Grid cols={2} gap="md">
     <FormItem name="name" label="姓名" required>
-      <Input placeholder="请输入姓名" allowClear />
+      <Input placeholder="请输入姓�? allowClear />
     </FormItem>
     <FormItem name="city" label="城市">
       <Select options={cities} placeholder="请选择" searchable />
@@ -55,7 +53,7 @@ const cities = [
 ### 弹窗示例
 
 ```tsx
-import { Modal, Button } from '@aui/react';
+import { Modal, Button } from '@yaomingshan/react';
 
 const [open, setOpen] = useState(false);
 
@@ -77,26 +75,25 @@ const [open, setOpen] = useState(false);
 ### Toast 提示
 
 ```tsx
-import { Toast, Button } from '@aui/react';
+import { Toast, Button } from '@yaomingshan/react';
 
 // 成功提示
-<Button onClick={() => Toast.success('保存成功！')}>保存</Button>
+<Button onClick={() => Toast.success('保存成功�?)}>保存</Button>
 
 // 错误提示
 <Button onClick={() => Toast.error('网络错误，请重试')}>提交</Button>
 
-// 加载提示（不自动关闭）
-<Button onClick={() => Toast.loading('正在提交...')}>提交</Button>
+// 加载提示（不自动关闭�?<Button onClick={() => Toast.loading('正在提交...')}>提交</Button>
 ```
 
 ### 数据展示
 
 ```tsx
-import { Table, Tag, Badge, Avatar } from '@aui/react';
+import { Table, Tag, Badge, Avatar } from '@yaomingshan/react';
 
 const columns = [
   { key: 'name', title: '姓名', dataIndex: 'name' },
-  { key: 'status', title: '状态', render: (_, r) =>
+  { key: 'status', title: '状�?, render: (_, r) =>
     <Tag color={r.status === 'active' ? 'success' : 'gray'}>
       {r.status === 'active' ? '启用' : '禁用'}
     </Tag>
@@ -114,9 +111,9 @@ const columns = [
 ### 移动端适配
 
 ```tsx
-import { Page, CardList, BottomSheet } from '@aui/react';
+import { Page, CardList, BottomSheet } from '@yaomingshan/react';
 
-// 移动端 Page，自动将 Table 转为 CardList
+// 移动�?Page，自动将 Table 转为 CardList
 <Page title="用户列表" platform="mobile">
   <CardList
     dataSource={users}
@@ -129,8 +126,7 @@ import { Page, CardList, BottomSheet } from '@aui/react';
   />
 </Page>
 
-// 底部操作栏
-<BottomSheet
+// 底部操作�?<BottomSheet
   visible={showActions}
   actions={[
     { key: 'edit', text: '编辑', onClick: handleEdit },
@@ -151,7 +147,7 @@ import { Page, CardList, BottomSheet } from '@aui/react';
 // Input
 <Input
   type="text"
-  placeholder="请输入"
+  placeholder="请输�?
   prefix={<SearchIcon />}
   suffix={<ClearIcon />}
   allowClear
@@ -169,8 +165,7 @@ import { Page, CardList, BottomSheet } from '@aui/react';
 />
 ```
 
-## 下一步
-
+## 下一�?
 - [设计令牌 →](/guide/tokens)
 - [组件文档 →](/components/)
 - [AI 宪法 →](/ai-rules/)

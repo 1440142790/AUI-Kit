@@ -29,7 +29,7 @@ importers:
 
   packages/cli:
     dependencies:
-      '@aui/core':
+      '@yaomingshan/core':
         specifier: workspace:*
         version: link:../core
       commander:
@@ -67,7 +67,7 @@ importers:
 
   packages/react:
     dependencies:
-      '@aui/core':
+      '@yaomingshan/core':
         specifier: workspace:*
         version: link:../core
     devDependencies:
@@ -92,7 +92,7 @@ importers:
 
   packages/vue:
     dependencies:
-      '@aui/core':
+      '@yaomingshan/core':
         specifier: workspace:*
         version: link:../core
     devDependencies:

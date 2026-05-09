@@ -1,8 +1,7 @@
 /**
- * CardList 卡片列表（Table 的移动端替代）
- *
+ * CardList 卡片列表（Table 的移动端替代�? *
  * @example React
- * import { CardList } from '@aui/react';
+ * import { CardList } from '@yaomingshan/react';
  * <CardList
  *   dataSource={list}
  *   columns={2}
@@ -11,7 +10,7 @@
  */
 
 import React from 'react';
-import { type CardListProps, type Spacing, cx } from '@aui/core';
+import { type CardListProps, type Spacing, cx } from '@yaomingshan/core';
 import { Empty } from '../feedback/Empty';
 import { Skeleton } from '../feedback/Skeleton';
 

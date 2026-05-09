@@ -1,7 +1,7 @@
 {
   "name": "aui-kit",
   "version": "0.1.0-alpha",
-  "description": "AI-optimized Universal UI Kit - 跨框架、跨端 UI 组件体系，让 AI 编程工具为任意框架生成一致界面",
+  "description": "AI-optimized Universal UI Kit - 跨框架、跨�?UI 组件体系，让 AI 编程工具为任意框架生成一致界�?,
   "private": true,
   "license": "MIT",
   "repository": {
@@ -34,7 +34,7 @@
     "clean": "pnpm -r run clean && rm -rf node_modules",
     "typecheck": "pnpm -r run typecheck",
     "test": "pnpm -r run test",
-    "preview": "pnpm --filter @aui/react-demo --filter @aui/vue-demo run dev"
+    "preview": "pnpm --filter @yaomingshan/react-demo --filter @yaomingshan/vue-demo run dev"
   },
   "devDependencies": {
     "typescript": "^5.4.0",

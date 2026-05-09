@@ -1,7 +1,7 @@
 {
-  "name": "@aui/core",
+  "name": "@yaomingshan/core",
   "version": "0.1.0-alpha",
-  "description": "AUI Kit 核心包 - 设计令牌、类型定义、工具函数、平台检测",
+  "description": "AUI Kit 核心�?- 设计令牌、类型定义、工具函数、平台检�?,
   "type": "module",
   "license": "MIT",
   "repository": {

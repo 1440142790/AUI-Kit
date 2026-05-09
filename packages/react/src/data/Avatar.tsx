@@ -2,17 +2,17 @@
  * Avatar 头像
  *
  * @example React
- * import { Avatar } from '@aui/react';
+ * import { Avatar } from '@yaomingshan/react';
  * <Avatar src="https://example.com/avatar.jpg" size="lg" />
- * <Avatar text="李" size={64} color="primary" />
+ * <Avatar text="�? size={64} color="primary" />
  *
  * @example Vue
  * <Avatar src="https://example.com/avatar.jpg" size="lg" />
- * <Avatar text="李" :size="64" color="primary" />
+ * <Avatar text="�? :size="64" color="primary" />
  */
 
 import React, { useState } from 'react';
-import { type AvatarProps, type ColorType, type Size, cx } from '@aui/core';
+import { type AvatarProps, type ColorType, type Size, cx } from '@yaomingshan/core';
 
 const sizeMap: Record<Size, string> = {
   xs:  'w-6 h-6 text-xs',

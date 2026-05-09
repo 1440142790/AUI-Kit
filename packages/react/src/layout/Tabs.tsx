@@ -1,8 +1,7 @@
 /**
- * Tabs 标签页
- *
+ * Tabs 标签�? *
  * @example React
- * import { Tabs } from '@aui/react';
+ * import { Tabs } from '@yaomingshan/react';
  * const items = [
  *   { key: 'tab1', label: 'Tab 1', children: <div>内容1</div> },
  *   { key: 'tab2', label: 'Tab 2', children: <div>内容2</div> },
@@ -14,7 +13,7 @@
  */
 
 import React, { useState } from 'react';
-import { type TabsProps, cx } from '@aui/core';
+import { type TabsProps, cx } from '@yaomingshan/core';
 
 export const Tabs = React.forwardRef<HTMLDivElement, TabsProps>(
   ({ items = [], activeKey, onChange, type = 'line', tabPosition = 'top', className, ...rest }, ref) => {

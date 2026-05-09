@@ -10,7 +10,7 @@
     "declaration": true,
     "declarationDir": "./dist",
     "paths": {
-      "@aui/core": ["./node_modules/@aui/core"]
+      "@yaomingshan/core": ["./node_modules/@yaomingshan/core"]
     }
   },
   "include": ["src/**/*.ts", "src/**/*.vue"]

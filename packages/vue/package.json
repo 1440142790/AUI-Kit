@@ -1,7 +1,7 @@
 {
-  "name": "@aui/vue",
+  "name": "@yaomingshan/vue",
   "version": "0.1.0-alpha",
-  "description": "AUI Kit Vue 3 实现 - 基于 Tailwind CSS 的跨端 UI 组件，Props 接口与 React 版完全一致",
+  "description": "AUI Kit Vue 3 实现 - 基于 Tailwind CSS 的跨�?UI 组件，Props 接口�?React 版完全一�?,
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -41,7 +41,7 @@
     "typecheck": "vue-tsc --noEmit"
   },
   "peerDependencies": {
-    "@aui/core": "workspace:*",
+    "@yaomingshan/core": "workspace:*",
     "vue": ">=3.4.0"
   },
   "devDependencies": {

@@ -3,20 +3,18 @@
  *
  * @example
  * // React
- * import { colors, sizeKeys, type ButtonProps } from '@aui/core';
+ * import { colors, sizeKeys, type ButtonProps } from '@yaomingshan/core';
  *
  * // Vue
- * import { colors, sizeKeys, type ButtonProps } from '@aui/core';
+ * import { colors, sizeKeys, type ButtonProps } from '@yaomingshan/core';
  */
 
 // 设计令牌
 export * from './tokens';
 
-// 类型定义（全部组件 Props 接口）
-export type * from './types/components';
+// 类型定义（全部组�?Props 接口�?export type * from './types/components';
 
-// 平台检测
-export {
+// 平台检�?export {
   detectPlatform,
   isMobile,
   isWeb,

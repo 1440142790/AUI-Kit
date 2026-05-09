@@ -1,20 +1,19 @@
 /**
- * Spin 加载中
- *
+ * Spin 加载�? *
  * @example React
- * import { Spin } from '@aui/react';
- * <Spin spinning={loading} tip="加载中...">
+ * import { Spin } from '@yaomingshan/react';
+ * <Spin spinning={loading} tip="加载�?..">
  *   <div>内容</div>
  * </Spin>
  *
  * @example Vue
- * <Spin :spinning="loading" tip="加载中...">
+ * <Spin :spinning="loading" tip="加载�?..">
  *   <div>内容</div>
  * </Spin>
  */
 
 import React, { useMemo } from 'react';
-import { type SpinProps, type Size, cx } from '@aui/core';
+import { type SpinProps, type Size, cx } from '@yaomingshan/core';
 
 const spinSizeMap: Record<Size, string> = {
   xs:  'w-4 h-4 border-[2px]',

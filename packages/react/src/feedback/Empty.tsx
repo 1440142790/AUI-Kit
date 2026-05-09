@@ -1,8 +1,7 @@
 /**
- * Empty 空状态
- *
+ * Empty 空状�? *
  * @example React
- * import { Empty } from '@aui/react';
+ * import { Empty } from '@yaomingshan/react';
  * <Empty description="暂无数据" />
  * <Empty image="simple" description="暂无内容" />
  *
@@ -11,7 +10,7 @@
  */
 
 import React, { useMemo } from 'react';
-import { type EmptyProps, cx } from '@aui/core';
+import { type EmptyProps, cx } from '@yaomingshan/core';
 
 const SimpleSVG = () => (
   <svg width="64" height="40" viewBox="0 0 64 40" fill="none">

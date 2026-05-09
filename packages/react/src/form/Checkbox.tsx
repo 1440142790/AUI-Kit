@@ -2,13 +2,13 @@
  * Checkbox 多选框
  *
  * @example React
- * import { Checkbox } from '@aui/react';
+ * import { Checkbox } from '@yaomingshan/react';
  * const options = [{ label: '苹果', value: 'apple' }, { label: '香蕉', value: 'banana' }];
  * <Checkbox options={options} value={selected} onChange={setSelected} />
  */
 
 import React, { useState, useMemo } from 'react';
-import { type CheckboxProps, cx } from '@aui/core';
+import { type CheckboxProps, cx } from '@yaomingshan/core';
 
 export const Checkbox = React.forwardRef<HTMLDivElement, CheckboxProps>(
   ({ options = [], value, defaultValue = [], direction = 'horizontal', onChange, disabled = false, checkAll = false, className, ...rest }, ref) => {
@@ -63,8 +63,7 @@ export const Checkbox = React.forwardRef<HTMLDivElement, CheckboxProps>(
               )}
             </span>
             <input type="checkbox" checked={allChecked} disabled={disabled} onChange={handleCheckAll} className="sr-only" />
-            全选
-          </label>
+            全�?          </label>
         )}
         {options.map((opt) => {
           const checked = (currentValue as string[]).includes(opt.value);

@@ -4,7 +4,7 @@
  * @fileoverview 基于 Flexbox 的弹性布局容器
  *
  * @example React
- * import { Flex } from '@aui/react';
+ * import { Flex } from '@yaomingshan/react';
  *
  * <Flex direction="column" gap="md">
  *   <div>上方</div>
@@ -24,7 +24,7 @@
  */
 
 import React, { useMemo } from 'react';
-import { type FlexProps, type Spacing, cx } from '@aui/core';
+import { type FlexProps, type Spacing, cx } from '@yaomingshan/core';
 
 const gapMap: Record<Spacing, string> = {
   xs:   'gap-1',

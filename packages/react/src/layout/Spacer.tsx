@@ -4,7 +4,7 @@
  * @fileoverview Flex 布局中的留白组件
  *
  * @example React
- * import { Flex, Spacer } from '@aui/react';
+ * import { Flex, Spacer } from '@yaomingshan/react';
  *
  * <Flex>
  *   <Button>左侧</Button>
@@ -21,7 +21,7 @@
  */
 
 import React, { useMemo } from 'react';
-import { type SpacerProps, type Spacing, cx } from '@aui/core';
+import { type SpacerProps, type Spacing, cx } from '@yaomingshan/core';
 
 const sizeMap: Record<Spacing, string> = {
   xs:   'w-1 h-1',

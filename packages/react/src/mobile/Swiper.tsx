@@ -2,7 +2,7 @@
  * Swiper 轮播
  *
  * @example React
- * import { Swiper } from '@aui/react';
+ * import { Swiper } from '@yaomingshan/react';
  * <Swiper autoplay dots loop>
  *   <div>Slide 1</div>
  *   <div>Slide 2</div>
@@ -11,7 +11,7 @@
  */
 
 import React, { useState, useEffect, useRef } from 'react';
-import { type SwiperProps, cx } from '@aui/core';
+import { type SwiperProps, cx } from '@yaomingshan/core';
 
 export const Swiper = React.forwardRef<HTMLDivElement, SwiperProps>(
   ({ autoplay = false, dots = true, loop = false, interval = 3000, onChange, currentIndex, className, children, ...rest }, ref) => {

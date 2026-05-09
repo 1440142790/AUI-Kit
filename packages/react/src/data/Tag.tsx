@@ -2,17 +2,17 @@
  * Tag 标签
  *
  * @example React
- * import { Tag } from '@aui/react';
- * <Tag color="success">已完成</Tag>
- * <Tag color="#ff6b6b" closable onClose={handleClose}>自定义颜色</Tag>
+ * import { Tag } from '@yaomingshan/react';
+ * <Tag color="success">已完�?/Tag>
+ * <Tag color="#ff6b6b" closable onClose={handleClose}>自定义颜�?/Tag>
  *
  * @example Vue
- * <Tag color="success">已完成</Tag>
- * <Tag color="#ff6b6b" closable @close="handleClose">自定义颜色</Tag>
+ * <Tag color="success">已完�?/Tag>
+ * <Tag color="#ff6b6b" closable @close="handleClose">自定义颜�?/Tag>
  */
 
 import React, { useMemo } from 'react';
-import { type TagProps, type ColorType, cx } from '@aui/core';
+import { type TagProps, type ColorType, cx } from '@yaomingshan/core';
 
 const colorMap: Record<ColorType, string> = {
   primary: 'bg-[#e6f4ff] text-[#1677ff] border-[#1677ff]',
@@ -29,8 +29,7 @@ export const Tag = React.forwardRef<HTMLSpanElement, TagProps>(
       const base = 'inline-flex items-center gap-1 px-2 py-0.5 text-xs rounded font-medium border';
       if (!color) return cx(base, 'bg-[#f5f5f5] text-[#595959] border-[#d9d9d9]', className);
       if (Object.keys(colorMap).includes(color)) return cx(base, colorMap[color as ColorType], className);
-      // 自定义颜色（hex）
-      return cx(base, 'border', className);
+      // 自定义颜色（hex�?      return cx(base, 'border', className);
     }, [color, className]);
 
     const textColor = useMemo(() => {

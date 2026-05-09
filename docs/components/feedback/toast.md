@@ -1,16 +1,14 @@
-# Toast 轻提示
-
-命令式调用的全局提示，用于展示操作反馈。
-
+# Toast 轻提�?
+命令式调用的全局提示，用于展示操作反馈�?
 ## 基本用法
 
 ::: code-group
 
 ```tsx [React]
-import { Toast } from '@aui/react';
+import { Toast } from '@yaomingshan/react';
 
 // 成功提示
-Toast.success('保存成功！');
+Toast.success('保存成功�?);
 
 // 错误提示
 Toast.error('网络错误，请重试');
@@ -21,28 +19,26 @@ Toast.warning('内容过长，请精简');
 // 信息提示
 Toast.info('有新消息');
 
-// 加载提示（需手动关闭）
-Toast.loading('正在提交...');
+// 加载提示（需手动关闭�?Toast.loading('正在提交...');
 ```
 
 ```vue [Vue]
-<!-- Vue 中同样调用 -->
-import { Toast } from '@aui/core';
+<!-- Vue 中同样调�?-->
+import { Toast } from '@yaomingshan/core';
 
-Toast.success('保存成功！');
+Toast.success('保存成功�?);
 ```
 
 :::
 
-## 带回调
-
+## 带回�?
 ```tsx
 Toast.show({
   content: '保存成功',
   type: 'success',
   duration: 2000,
   onClose: () => {
-    console.log('Toast 关闭了');
+    console.log('Toast 关闭�?);
   },
 });
 ```
@@ -50,14 +46,12 @@ Toast.show({
 ## 手动关闭
 
 ```tsx
-// Toast.loading 返回后可以手动关闭
-const hide = Toast.loading('正在提交...');
+// Toast.loading 返回后可以手动关�?const hide = Toast.loading('正在提交...');
 
-// 异步操作完成后
-await saveData();
+// 异步操作完成�?await saveData();
 hide(); // 关闭 loading Toast
 
-Toast.success('提交成功！');
+Toast.success('提交成功�?);
 ```
 
 ## API
@@ -73,10 +67,10 @@ Toast.success('提交成功！');
 
 ## ToastOptions
 
-| 参数 | 说明 | 类型 | 默认值 |
+| 参数 | 说明 | 类型 | 默认�?|
 |------|------|------|--------|
 | `content` | 提示内容 | `ReactNode` | **必填** |
 | `type` | 类型 | `'success' \| 'error' \| 'warning' \| 'info' \| 'loading'` | `'info'` |
-| `duration` | 显示时长（ms），0 不自动关闭 | `number` | `2000` |
+| `duration` | 显示时长（ms），0 不自动关�?| `number` | `2000` |
 | `mask` | 是否显示遮罩 | `boolean` | `false` |
 | `onClose` | 关闭回调 | `() => void` | `-` |
